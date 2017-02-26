@@ -1,7 +1,7 @@
 {
   "name": "test-runner",
   "main": "./lib/test-runner",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A short description of your package",
   "keywords": [],
   "activationCommands": {
