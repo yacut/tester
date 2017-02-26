@@ -1,4 +1,4 @@
-# test-runner package
+# tester package
 
 The package is in development.
 
