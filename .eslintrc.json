@@ -2,5 +2,18 @@
     "extends": "airbnb-base",
     "plugins": [
         "import"
-    ]
+    ],
+    "globals": {
+      "atom": "true",
+      "document": "true"
+    },
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "import/extensions": 0,
+      "import/no-unresolved": 0,
+      "import/no-extraneous-dependencies": 0,
+      "no-restricted-syntax": 0
+    }
 }
