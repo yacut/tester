@@ -2,8 +2,8 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Toggle test-runner",
-        "command": "test-runner:toggle"
+        "label": "Toggle tester",
+        "command": "tester:toggle"
       }
     ]
   },
@@ -12,11 +12,11 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "test-runner",
+          "label": "tester",
           "submenu": [
             {
               "label": "Toggle",
-              "command": "test-runner:toggle"
+              "command": "tester:toggle"
             }
           ]
         }
