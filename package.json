@@ -17,7 +17,8 @@
     }
   },
   "dependencies": {
-    "atom-package-deps": "^4.4.1"
+    "atom-package-deps": "^4.4.1",
+    "sb-debounce": "^1.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
