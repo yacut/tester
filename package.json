@@ -64,6 +64,14 @@
       "type": "integer",
       "default": 5,
       "order": 4
+    },
+    "gutterPosition": {
+      "title": "Gutter Position",
+      "description": "For how many seconds should the output view above the status-bar stay open?",
+      "enum": ["Left", "Right"],
+      "type": "string",
+      "default": "Right",
+      "order": 5
     }
   }
 }
