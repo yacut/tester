@@ -10,10 +10,12 @@
     "env": {
       "node": true
     },
+    "parser": "babel-eslint",
     "rules": {
       "import/extensions": 0,
       "import/no-unresolved": 0,
       "import/no-extraneous-dependencies": 0,
-      "no-restricted-syntax": 0
+      "no-restricted-syntax": 0,
+      "strict": 0
     }
 }
