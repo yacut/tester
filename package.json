@@ -39,10 +39,31 @@
   "configSchema": {
     "testOnChange": {
       "title": "Test on Change",
-      "description": "Test files while typing, without the need to save",
+      "description": "Test files while typing, without the need to save?",
       "type": "boolean",
       "default": true,
       "order": 1
+    },
+    "testOnChangeInterval": {
+      "title": "Test on Change",
+      "description": "For how many seconds should the tester wait?",
+      "type": "integer",
+      "default": 1,
+      "order": 2
+    },
+    "testOnOpen": {
+      "title": "Test on Open",
+      "description": "Test files on open?",
+      "type": "boolean",
+      "default": true,
+      "order": 3
+    },
+    "messageTimeout": {
+      "title": "Output view timeout",
+      "description": "For how many seconds should the output view above the status-bar stay open?",
+      "type": "integer",
+      "default": 5,
+      "order": 4
     }
   }
 }
