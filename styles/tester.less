@@ -9,3 +9,89 @@
   display: inline-block;
   cursor: wait;
 }
+
+atom-text-editor.editor .tester-gutter {
+  width: 0.5em;
+  height: 0.5em !important;
+  border-radius: 50%;
+}
+
+atom-text-editor.editor .tester-row {
+  /* Take up the full allowed width */
+  left: 0;
+  right: 0;
+  /* Align the tester dot in the middle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+atom-text-editor.editor .tester-highlight, .tester-highlight{
+  &.badge {
+    border-radius: @component-border-radius;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &.fail {
+    &:not(.line-number){
+      background-color: @background-color-error;
+      color: contrast(@background-color-error);
+    }
+    .tester-gutter{
+      color: @background-color-error;
+    }
+    .region {
+      border-bottom: 1px dashed @background-color-error;
+    }
+  }
+  &.skip {
+    &:not(.line-number){
+      background-color: @background-color-warning;
+      color: contrast(@background-color-warning);
+    }
+    .tester-gutter{
+      color: @background-color-warning;
+    }
+    .region {
+      border-bottom: 1px dashed @background-color-warning;
+    }
+  }
+  &.pass {
+    &:not(.line-number){
+      background-color: @background-color-info;
+      color: contrast(@background-color-info);
+    }
+    .tester-gutter{
+      color: @background-color-info;
+    }
+    .region {
+      border-bottom: 1px dashed @background-color-info;
+    }
+  }
+
+  // Used by bottom status icon
+  &.status-fail {
+    color: @background-color-error;
+  }
+  &.status-pass{
+    color: @background-color-success;
+  }
+  &.status-skip{
+    color: @background-color-warning;
+  }
+}
+
+tester-bottom-status {
+  margin-left: .6em;
+  margin-right: 0 !important;
+  &[hidden] {
+    display: none;
+  }
+}
+
+tester-bottom-container {
+  margin-right: .6em;
+  [hidden] {
+    display: none;
+  }
+}
