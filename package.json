@@ -67,11 +67,18 @@
     },
     "gutterPosition": {
       "title": "Gutter Position",
-      "description": "For how many seconds should the output view above the status-bar stay open?",
+      "description": "Position of Gutter Highlights?",
       "enum": ["Left", "Right"],
       "type": "string",
       "default": "Right",
       "order": 5
+    },
+    "gutterEnabled": {
+      "title": "Gutter Enabled",
+      "description": "Highlight Error Lines in Gutter?",
+      "type": "boolean",
+      "default": true,
+      "order": 6
     }
   }
 }
