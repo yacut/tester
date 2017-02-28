@@ -8,7 +8,8 @@
       "document": "true"
     },
     "env": {
-      "node": true
+      "node": true,
+      "mocha": true
     },
     "parser": "babel-eslint",
     "rules": {
