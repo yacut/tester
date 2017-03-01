@@ -92,7 +92,7 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
   &[hidden] {
     display: none;
   }
-  &.failed {
+  &.tester-status-failed {
     padding: 1px 4px;
     border-radius: 2px;
     font-weight: 500;
@@ -102,14 +102,14 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
   }
-  &.passed {
+  &.tester-status-passed {
     padding: 1px 4px;
     font-weight: 500;
     color: white;
     text-shadow: 0 1px 0px rgba(0, 0, 0, 0.2);
     background-color: @background-color-success;
   }
-  &.skipped {
+  &.tester-status-skipped {
     padding: 1px 4px;
     border-radius: 2px;
     font-weight: 500;
