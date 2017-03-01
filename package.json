@@ -70,7 +70,7 @@
       "description": "Position of Gutter Highlights?",
       "enum": ["Left", "Right"],
       "type": "string",
-      "default": "Left",
+      "default": "Right",
       "order": 5
     },
     "gutterEnabled": {
