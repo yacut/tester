@@ -11,9 +11,9 @@
 }
 
 atom-text-editor.editor .tester-gutter {
-  width: 0.5em;
-  height: 0.5em !important;
-  border-radius: 50%;
+  width: 1em;
+  height: 1em !important;
+  border-radius: 30%;
 }
 
 atom-text-editor.editor .tester-row {
@@ -58,14 +58,14 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
   }
   &.passed {
     &:not(.line-number){
-      background-color: @background-color-info;
-      color: contrast(@background-color-info);
+      background-color: @background-color-success;
+      color: contrast(@background-color-success);
     }
     .tester-gutter{
-      color: @background-color-info;
+      color: @background-color-success;
     }
     .region {
-      border-bottom: 1px dashed @background-color-info;
+      border-bottom: 1px dashed @background-color-success;
     }
   }
 
