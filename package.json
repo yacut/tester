@@ -39,7 +39,7 @@
   "configSchema": {
     "testOnChange": {
       "title": "Test on Change",
-      "description": "Test files while typing, without the need to save?",
+      "description": "Test files while typing, without the need to save? (restart required)",
       "type": "boolean",
       "default": true,
       "order": 1
@@ -53,7 +53,7 @@
     },
     "testOnOpen": {
       "title": "Test on Open",
-      "description": "Test files on open?",
+      "description": "Test files on open? (restart required)",
       "type": "boolean",
       "default": true,
       "order": 3
