@@ -8,6 +8,7 @@
   vertical-align: middle !important;
   display: inline-block;
   cursor: wait;
+  background-color: @app-background-color;
 }
 
 .gutter[gutter-name=tester] {
@@ -95,24 +96,15 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
     display: none;
   }
   &.tester-status-failed {
-    text-shadow: 0 1px 0px rgba(0, 0, 0, 0.2);
-    background-color: @background-color-error;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
-    color: white;
   }
   &.tester-status-passed {
-    text-shadow: 0 1px 0px rgba(0, 0, 0, 0.2);
-    background-color: @background-color-success;
-    color: white;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
   }
   &.tester-status-skipped {
-    text-shadow: 0 1px 0px rgba(0, 0, 0, 0.2);
-    background-color: @background-color-warning;
     border-radius: 0;
-    color: white;
   }
 }
 
