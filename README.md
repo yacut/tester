@@ -76,6 +76,9 @@ export function provideTester() {
   };
 }
 ```
+#### Inspiration
+
+I'd like to give a shout out to [Wallaby.js](https://wallabyjs.com/), which is a significantly more comprehensive and covers a lot more editors, if this extension interests you - check out that too.
 
 #### Contribute
 
