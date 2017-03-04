@@ -6,3 +6,7 @@
 * Added First integration with [tester-mocha](https://github.com/yacut/tester-mocha) provider
 * Useful IDE based Feedback
 * Session based test watching
+
+## v0.2.1
+* fix scopes pattern
+* fix locking
