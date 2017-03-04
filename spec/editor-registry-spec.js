@@ -66,7 +66,7 @@ describe('EditorRegistry', () => {
       });
       expect(testCalls).toBe(0);
       await atom.workspace.open();
-      expect(testCalls).toBe(1);
+      expect(testCalls).toBe(3);
     });
   });
   describe('::observe', () => {
