@@ -3,7 +3,7 @@
   "main": "./lib/tester",
   "author": "yacut",
   "readme": "./README.md",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A interactive test runner with IDE based Feedback",
   "keywords": [
     "test",
@@ -81,7 +81,7 @@
       "default": 5,
       "order": 4
     },
-    "showOutputAfterTestRun":{
+    "showOutputAfterTestRun": {
       "title": "Show output after test run",
       "description": "Show output after test run?",
       "type": "boolean",
