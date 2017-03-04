@@ -1,13 +1,25 @@
 {
   "name": "tester",
   "main": "./lib/tester",
+  "author": "yacut",
+  "readme": "./README.md",
   "version": "0.1.0",
-  "description": "A short description of your package",
-  "keywords": [],
+  "description": "A interactive test runner with IDE based Feedback",
+  "keywords": [
+    "test",
+    "tester",
+    "testing",
+    "interactive",
+    "mocha",
+    "wallaby.js"
+  ],
   "repository": "https://github.com/yacut/tester",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
+  },
+  "scripts": {
+    "test": "(apm test) && (flow check) && (eslint . )"
   },
   "consumedServices": {
     "status-bar": {
