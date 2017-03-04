@@ -2,7 +2,7 @@
 
 import { it, beforeEach } from 'jasmine-fix';
 import TesterRegistry from '../lib/tester-registry';
-import { getTester, getFixturesPath } from './common';
+import { getEditorTester, getTester, getFixturesPath } from './common';
 
 describe('TesterRegistry', () => {
   let testerRegistry;
@@ -25,7 +25,7 @@ describe('TesterRegistry', () => {
         await atom.workspace.open(getFixturesPath('file.txt'));
         const editor = atom.workspace.getActiveTextEditor();
         await atom.workspace.open(__filename);
-        expect(await testerRegistry.test(editor)).toBe(true);
+        expect(await testerRegistry.test(getEditorTester(editor))).toBe(true);
       } finally {
         atom.workspace.destroyActivePane();
       }
@@ -49,7 +49,7 @@ describe('TesterRegistry', () => {
       const tester = getTester();
       const editor = atom.workspace.getActiveTextEditor();
       testerRegistry.addTester(tester);
-      const promise = testerRegistry.test(editor);
+      const promise = testerRegistry.test(getEditorTester(editor));
       expect(timesBegan).toBe(1);
       expect(timesUpdated).toBe(0);
       expect(timesFinished).toBe(0);
@@ -76,7 +76,7 @@ describe('TesterRegistry', () => {
       const editor = atom.workspace.getActiveTextEditor();
       testerRegistry.addTester(tester);
       editor.destroy();
-      const promise = testerRegistry.test(editor);
+      const promise = testerRegistry.test(getEditorTester(editor));
       expect(timesBegan).toBe(1);
       expect(timesUpdated).toBe(0);
       expect(timesFinished).toBe(0);
@@ -103,7 +103,7 @@ describe('TesterRegistry', () => {
       const editor = atom.workspace.getActiveTextEditor();
       testerRegistry.addTester(tester);
       tester.test = function test() { throw new Error('Boom'); };
-      const promise = testerRegistry.test(editor);
+      const promise = testerRegistry.test(getEditorTester(editor));
       expect(timesBegan).toBe(1);
       expect(timesUpdated).toBe(0);
       expect(timesFinished).toBe(0);

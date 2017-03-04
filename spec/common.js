@@ -41,3 +41,7 @@ export function getMessage(param/* : ?(boolean | string)*/)/* : Object*/ {
 export function getFixturesPath(path/* : string*/)/* : string*/ {
   return Path.join(__dirname, 'fixtures', path);
 }
+
+export function getEditorTester(textEditor/* : any*/)/* : any*/ {
+  return { editor: textEditor };
+}
