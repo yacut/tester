@@ -14,6 +14,9 @@
     "wallaby.js"
   ],
   "repository": "https://github.com/yacut/tester",
+  "bugs": {
+    "url": "https://github.com/yacut/tester/issues"
+  },
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

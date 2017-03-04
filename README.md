@@ -5,7 +5,7 @@
 [![Package version!](https://img.shields.io/apm/v/tester.svg?style=flat-square)](https://atom.io/packages/tester)
 [![Dependencies!](https://img.shields.io/david/yacut/Tester.svg?style=flat-square)](https://david-dm.org/yacut/tester)
 
-Tester is a tester provider for the hackable [Atom Editor](http://atom.io). Additionally, you need to install a specific tester for your test framework. You will find a full list below in the [Available testers](#available-testers) section.
+Tester is a tester provider for the hackable [Atom Editor](http://atom.io). Additionally, you need to install a specific tester provider for your test framework. You will find a full list below in the [Known provider](#known-providers) section.
 
 
 ![Preview](https://raw.githubusercontent.com/yacut/tester/master/preview.gif)
@@ -20,7 +20,7 @@ $ apm install tester
 
 Or you can install from Settings view by searching for `Tester`.
 
-### Known Testers
+### Known provider
 
 * [Mocha](https://atom.io/packages/tester-mocha) test runner.
 
