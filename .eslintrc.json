@@ -5,13 +5,13 @@
     ],
     "globals": {
       "atom": "true",
-      "document": "true"
+      "document": "true",
+      "expect": "true"
     },
     "env": {
       "node": true,
       "mocha": true
     },
-    "parser": "babel-eslint",
     "rules": {
       "import/extensions": 0,
       "import/no-unresolved": 0,

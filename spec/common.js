@@ -2,7 +2,7 @@
 
 import Path from 'path';
 
-export function getTester(): Object {
+export function getTester()/* : Object*/ {
   return {
     name: 'Some Linter',
     scope: 'project',
@@ -14,8 +14,8 @@ export function getTester(): Object {
   };
 }
 
-export function getMessage(param: ?(boolean | string)): Object {
-  const message: Object = { severity: 'error', excerpt: String(Math.random()), location: { file: __filename, position: [[0, 0], [0, 0]] } };
+export function getMessage(param/* : ?(boolean | string)*/)/* : Object*/ {
+  const message/* : Object*/ = { severity: 'error', excerpt: String(Math.random()), location: { file: __filename, position: [[0, 0], [0, 0]] } };
   message.location.file = param;
   return message;
 }
