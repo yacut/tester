@@ -50,7 +50,8 @@
     "eslint": "^3.16.1",
     "eslint-config-airbnb-base": "^11.1.0",
     "eslint-plugin-import": "^2.2.0",
-    "flow-bin": "^0.40.0"
+    "flow-bin": "^0.40.0",
+    "jasmine-fix": "^1.0.1"
   },
   "configSchema": {
     "testOnChange": {
