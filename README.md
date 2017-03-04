@@ -1,9 +1,11 @@
 # Tester
 
-<!-- [![Build Status](https://img.shields.io/circleci/project/yacut/tester.svg?style=flat-square)](https://circleci.com/gh/yacut/tester) -->
-[![Plugin installs!](https://img.shields.io/apm/dm/tester.svg?style=flat-square)](https://atom.io/packages/tester)
-[![Package version!](https://img.shields.io/apm/v/tester.svg?style=flat-square)](https://atom.io/packages/tester)
-[![Dependencies!](https://img.shields.io/david/yacut/Tester.svg?style=flat-square)](https://david-dm.org/yacut/tester)
+![Build Status](https://travis-ci.org/yacut/tester.svg?branch=master)
+[![APM Version](https://img.shields.io/apm/v/tester.svg)](https://atom.io/packages/tester)
+[![APM Downloads](https://img.shields.io/apm/dm/tester.svg)](https://atom.io/packages/tester)
+[![GitHub stars](https://img.shields.io/github/stars/yacut/tester.svg)](https://github.com/yacut/tester/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/yacut/tester.svg)](https://github.com/yacut/tester/issues)
+[![Dependencies!](https://img.shields.io/david/yacut/Tester.svg)](https://david-dm.org/yacut/tester)
 
 Tester is a test runner for the hackable [Atom Editor](http://atom.io). Additionally, you need to install a specific tester provider for your test framework. You will find a full list below in the [Known provider](#known-providers) section.
 
