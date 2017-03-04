@@ -1,6 +1,6 @@
 # Tester
 
-![Build Status](https://travis-ci.org/yacut/tester.svg?branch=master)
+![Build Status](https://travis-ci.org/yacut/tester.svg)
 [![APM Version](https://img.shields.io/apm/v/tester.svg)](https://atom.io/packages/tester)
 [![APM Downloads](https://img.shields.io/apm/dm/tester.svg)](https://atom.io/packages/tester)
 [![GitHub stars](https://img.shields.io/github/stars/yacut/tester.svg)](https://github.com/yacut/tester/stargazers)

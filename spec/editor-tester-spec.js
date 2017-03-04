@@ -16,6 +16,12 @@ describe('EditorTester', () => {
     atom.workspace.destroyActivePaneItem();
   });
 
+  describe('::constructor', () => {
+    it('is a saint', () => {
+      expect(() => new EditorTester()).not.toThrow();
+    });
+  });
+
   describe('onDidDestroy', () => {
     it('is called when text editor is destroyed', () => {
       let triggered = false;

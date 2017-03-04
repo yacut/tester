@@ -6,7 +6,8 @@
     "globals": {
       "atom": "true",
       "document": "true",
-      "expect": "true"
+      "expect": "true",
+      "spyOn": "true"
     },
     "env": {
       "node": true,
