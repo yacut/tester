@@ -4,12 +4,30 @@ import Path from 'path';
 
 export function getTester()/* : Object*/ {
   return {
-    name: 'Some Linter',
-    scope: 'project',
-    lintsOnChange: false,
-    grammarScopes: ['source.js'],
+    name: 'tester-name',
+    options: {},
+    scopes: ['**/test/*.js', '**/*spec.js'],
     test() {
-      return [];
+      // Note, a Promise may be returned as well!
+      return {
+        messages: [
+          {
+            duration: 1, // duration in ms
+            error: {
+              name: 'optional error object',
+              message: 'something went wrong',
+              actual: 'optional actual result', // can be an object
+              expected: 'optional expected result', // can be an object
+              operator: 'optional operator',
+            },
+            filePath: 'file path to highlight',
+            lineNumber: 1, // line number to highlight
+            state: 'failed', // 'passed' | 'failed' | 'skipped',
+            title: 'some test title',
+          },
+        ],
+        output: 'tester console output',
+      };
     },
   };
 }
