@@ -7,8 +7,11 @@
 
 Tester is a test runner for the hackable [Atom Editor](http://atom.io). Additionally, you need to install a specific tester provider for your test framework. You will find a full list below in the [Known provider](#known-providers) section.
 
-
 ![Preview](https://raw.githubusercontent.com/yacut/tester/master/preview.gif)
+
+### Base Features
+- IDE based Feedback
+- Session based test watching
 
 #### How to / Installation
 
