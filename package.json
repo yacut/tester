@@ -66,6 +66,13 @@
       "default": 5,
       "order": 4
     },
+    "showOutputAfterTestRun":{
+      "title": "Show output after test run",
+      "description": "Show output after test run?",
+      "type": "boolean",
+      "default": true,
+      "order": 5
+    },
     "gutterPosition": {
       "title": "Gutter Position",
       "description": "Position of Gutter Highlights?",
@@ -75,14 +82,14 @@
       ],
       "type": "string",
       "default": "Right",
-      "order": 5
+      "order": 6
     },
     "gutterEnabled": {
       "title": "Gutter Enabled",
       "description": "Highlight Error Lines in Gutter?",
       "type": "boolean",
       "default": true,
-      "order": 6
+      "order": 7
     }
   }
 }
