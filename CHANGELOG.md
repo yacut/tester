@@ -10,3 +10,7 @@
 ## v0.2.1
 * fix scopes pattern
 * fix locking
+
+## v0.2.2
+* fix regexp handling
+* alway show status bar
