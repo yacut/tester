@@ -14,3 +14,6 @@
 ## v0.2.2
 * fix regexp handling
 * alway show status bar
+
+## v0.2.3
+* fix destroy functionality
