@@ -20,3 +20,6 @@
 
 ## v0.2.4
 * disable test on change by default
+
+## v0.2.6
+* fix test on change
