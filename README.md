@@ -28,6 +28,7 @@ Or you can install from Settings view by searching for `Tester`.
 ### Known provider
 
 * [Mocha](https://atom.io/packages/tester-mocha) test runner.
+* [Jest](https://atom.io/packages/tester-jest) test runner.
 
 ### Tester API
 
