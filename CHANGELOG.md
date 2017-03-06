@@ -17,3 +17,6 @@
 
 ## v0.2.3
 * fix destroy functionality
+
+## v0.2.4
+* disable test on change by default
