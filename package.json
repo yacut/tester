@@ -58,7 +58,7 @@
       "title": "Test on Change",
       "description": "Test files while typing, without the need to save? (restart required)",
       "type": "boolean",
-      "default": true,
+      "default": false,
       "order": 1
     },
     "testOnChangeInterval": {
