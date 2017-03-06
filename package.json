@@ -62,7 +62,7 @@
       "order": 1
     },
     "testOnChangeInterval": {
-      "title": "Test on Change",
+      "title": "Test on Change Interval",
       "description": "For how many seconds should the tester wait?",
       "type": "integer",
       "default": 1,
