@@ -1,5 +1,5 @@
 {
   "atom-workspace": {
-    "ctrl-alt-t": "tester:toggle"
+    "ctrl-alt-t": "tester:toggle-tester-output"
   }
 }
