@@ -58,6 +58,7 @@ describe('TesterRegistry', () => {
       expect(timesFinished).toBe(1);
     });
     it('update if the buffer it was associated to was destroyed', async () => {
+      atom.config.set('tester.testOnChange', true);
       let timesBegan = 0;
       let timesUpdated = 0;
       let timesFinished = 0;
