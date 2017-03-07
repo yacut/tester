@@ -3,7 +3,7 @@
     "atom-text-editor": [
       {
         "label": "Toggle tester",
-        "command": "tester:toggle"
+        "command": "tester:toggle-tester-output"
       }
     ]
   },
@@ -16,7 +16,7 @@
           "submenu": [
             {
               "label": "Toggle",
-              "command": "tester:toggle"
+              "command": "tester:toggle-tester-output"
             }
           ]
         }
