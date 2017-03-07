@@ -23,3 +23,6 @@
 
 ## v0.2.6
 * fix test on change
+
+## v0.2.7
+* Merge pull request #1 from hotchpotch/changetoggle_command
