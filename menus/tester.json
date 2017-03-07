@@ -12,7 +12,7 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "tester",
+          "label": "Tester",
           "submenu": [
             {
               "label": "Toggle",
