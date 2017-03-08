@@ -106,6 +106,13 @@
       "type": "boolean",
       "default": true,
       "order": 7
+    },
+    "ansiToHtml": {
+      "title": "Convert ansi console output to html",
+      "description": "If console output has ansi colors should it convert to html colors?",
+      "type": "boolean",
+      "default": true,
+      "order": 8
     }
   }
 }
