@@ -21,11 +21,11 @@
 ## v0.2.4
 * disable test on change by default
 
-## v0.2.6
+## v0.2.5
 * fix test on change
 
-## v0.2.7
+## v0.2.6
 * Merge pull request #1 from hotchpotch/changetoggle_command
 
-## v0.2.8
+## v0.2.7
 * add config to convert console output from ansi to html
