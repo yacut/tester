@@ -21,3 +21,4 @@ clone_depth: 10
 skip_tags: true
 test: off
 deploy: off
+build: off
