@@ -59,4 +59,18 @@ describe('Helpers', () => {
       expect(observeDisposed).toBe(1);
     });
   });
+  describe('convertWindowsPathToUnixPath', () => {
+    const originalPlatform = process.platform;
+    afterEach(() => {
+      Object.defineProperty(process, 'platform', { value: originalPlatform });
+    });
+    it('should convert windows path', () => {
+      Object.defineProperty(process, 'platform', { value: 'win32' });
+      expect(Helpers.convertWindowsPathToUnixPath('C:\\path\\to\\file.txt')).toBe('C:/path/to/file.txt');
+    });
+    it('should not convert unix path', () => {
+      Object.defineProperty(process, 'platform', { value: 'linux' });
+      expect(Helpers.convertWindowsPathToUnixPath('/path/to/file.txt')).toBe('/path/to/file.txt');
+    });
+  });
 });
