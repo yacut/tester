@@ -2,7 +2,7 @@
   "name": "tester",
   "main": "./lib/tester",
   "author": "yacut",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "A interactive test runner with IDE based Feedback",
   "keywords": [
     "test",
