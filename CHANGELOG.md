@@ -29,3 +29,7 @@
 
 ## v0.2.7
 * add config to convert console output from ansi to html
+
+## v0.2.8
+* fix scopes path for Windows
+* add windows build checks
