@@ -77,6 +77,9 @@ export function provideTester() {
         output: 'tester console output'
       };
     },
+    stop(textEditor) {
+      // stop tester if needed
+    }
   };
 }
 ```
