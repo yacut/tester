@@ -2,7 +2,7 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Toggle tester",
+        "label": "Toggle tester output",
         "command": "tester:toggle-tester-output"
       }
     ]
@@ -15,8 +15,16 @@
           "label": "Tester",
           "submenu": [
             {
-              "label": "Toggle",
+              "label": "Toggle tester output",
               "command": "tester:toggle-tester-output"
+            },
+            {
+              "label": "Test",
+              "command": "tester:test"
+            },
+            {
+              "label": "Stop",
+              "command": "tester:stop"
             }
           ]
         }
