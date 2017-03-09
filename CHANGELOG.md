@@ -33,3 +33,6 @@
 ## v0.2.8
 * fix scopes path for Windows
 * add windows build checks
+
+## 0.2.9
+* add stop functionality
