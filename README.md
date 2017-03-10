@@ -30,6 +30,7 @@ Or you can install from Settings view by searching for `Tester`.
 
 * [Mocha](https://atom.io/packages/tester-mocha) test runner.
 * [Jest](https://atom.io/packages/tester-jest) test runner.
+* [PHPUnit](https://atom.io/packages/tester-phpunit) test runner.
 
 ### Tester API
 
