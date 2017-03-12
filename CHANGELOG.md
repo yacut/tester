@@ -40,3 +40,7 @@
 ## 0.2.10
 * escape html in console output
 * set right colors for console output
+
+## 0.2.11
+* add setting "test on save"
+* remember last test results and show it on tab switch

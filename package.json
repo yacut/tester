@@ -75,19 +75,26 @@
       "default": true,
       "order": 3
     },
+    "testOnSave": {
+      "title": "Test on Save",
+      "description": "Test files on save? (restart required)",
+      "type": "boolean",
+      "default": true,
+      "order": 4
+    },
     "messageTimeout": {
       "title": "Output view timeout",
       "description": "For how many seconds should the output view above the status-bar stay open?",
       "type": "integer",
       "default": 5,
-      "order": 4
+      "order": 5
     },
     "showOutputAfterTestRun": {
       "title": "Show output after test run",
       "description": "Show output after test run?",
       "type": "boolean",
       "default": true,
-      "order": 5
+      "order": 6
     },
     "gutterPosition": {
       "title": "Gutter Position",
@@ -98,21 +105,21 @@
       ],
       "type": "string",
       "default": "Right",
-      "order": 6
+      "order": 7
     },
     "gutterEnabled": {
       "title": "Gutter Enabled",
       "description": "Highlight Error Lines in Gutter?",
       "type": "boolean",
       "default": true,
-      "order": 7
+      "order": 8
     },
     "ansiToHtml": {
       "title": "Convert ansi console output to html",
       "description": "If console output has ansi colors should it convert to html colors?",
       "type": "boolean",
       "default": true,
-      "order": 8
+      "order": 9
     }
   }
 }
