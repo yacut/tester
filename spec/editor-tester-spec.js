@@ -37,6 +37,7 @@ describe('EditorTester', () => {
 
   describe('onShouldTest', () => {
     it('is triggered on save', async () => {
+      atom.config.set('tester.testOnSave', true);
       let timesTriggered = 0;
       const editor = new EditorTester(textEditor);
       editor.onShouldTest(() => {
