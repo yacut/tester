@@ -70,14 +70,14 @@
     },
     "testOnOpen": {
       "title": "Test on Open",
-      "description": "Test files on open? (restart required)",
+      "description": "Test files on open?",
       "type": "boolean",
       "default": true,
       "order": 3
     },
     "testOnSave": {
       "title": "Test on Save",
-      "description": "Test files on save? (restart required)",
+      "description": "Test files on save?",
       "type": "boolean",
       "default": true,
       "order": 4
