@@ -36,3 +36,7 @@
 
 ## 0.2.9
 * add stop functionality
+
+## 0.2.10
+* escape html in console output
+* set right colors for console output
