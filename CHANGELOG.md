@@ -44,3 +44,6 @@
 ## 0.2.11
 * add setting "test on save"
 * remember last test results and show it on tab switch
+
+## 0.2.12
+* show info with test results if test editor is not active
