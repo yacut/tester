@@ -50,3 +50,6 @@
 
 ## 0.2.13
 * better tiny behavior
+
+## 0.2.14
+* fix statusBar position
