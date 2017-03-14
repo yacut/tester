@@ -47,3 +47,6 @@
 
 ## 0.2.12
 * show info with test results if test editor is not active
+
+## 0.2.13
+* better tiny behavior
