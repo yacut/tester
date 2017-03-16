@@ -120,6 +120,21 @@
       "type": "boolean",
       "default": true,
       "order": 9
+    },
+    "showInlineError": {
+      "title": "Show errors inline after test run",
+      "description": "Should show errors in text editor after test run?",
+      "type": "boolean",
+      "default": true,
+      "order": 10
+    },
+    "inlineErrorPosition": {
+      "title": "Inline error position",
+      "description": "Should show errors in text editor after or before test case?",
+      "type": "string",
+      "enum": ["after", "before"],
+      "default": "after",
+      "order": 11
     }
   }
 }
