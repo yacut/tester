@@ -53,3 +53,6 @@
 
 ## 0.2.14
 * fix statusBar position
+
+## 0.3.0
+* add inline error messages
