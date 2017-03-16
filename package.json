@@ -2,7 +2,7 @@
   "name": "tester",
   "main": "./lib/tester",
   "author": "yacut",
-  "version": "0.2.14",
+  "version": "0.3.0",
   "description": "A interactive test runner with IDE based Feedback",
   "keywords": [
     "test",
@@ -132,7 +132,10 @@
       "title": "Inline error position",
       "description": "Should show errors in text editor after or before test case?",
       "type": "string",
-      "enum": ["after", "before"],
+      "enum": [
+        "after",
+        "before"
+      ],
       "default": "after",
       "order": 11
     }
