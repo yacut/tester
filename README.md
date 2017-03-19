@@ -15,6 +15,16 @@ Tester is a test runner for the hackable [Atom Editor](http://atom.io). Addition
 ### Base Features
 - IDE based Feedback
 - Session based test watching
+- Test file on open
+- Test file after save
+- Gutter test result markers
+- Pop-Up notification with test results
+- In-line error messages
+- Console test output
+- Supported test frameworks:
+  * [Mocha](https://mochajs.org/)
+  * [Jest](https://github.com/facebook/jest)
+  * [PHPUnit](https://phpunit.de/)
 
 #### How to / Installation
 
@@ -26,7 +36,7 @@ $ apm install tester
 
 Or you can install from Settings view by searching for `Tester`.
 
-### Known provider
+### Known providers
 
 * [Mocha](https://atom.io/packages/tester-mocha) test runner.
 * [Jest](https://atom.io/packages/tester-jest) test runner.
@@ -84,11 +94,18 @@ export function provideTester() {
   };
 }
 ```
-#### Inspiration
+
+### Experimental Features
+
+#### Test all opened files after any save action
+
+![Preview](https://raw.githubusercontent.com/yacut/tester/master/resources/test-all-opened-files-preview.gif)
+
+### Inspiration
 
 I'd like to give a shout out to [Wallaby.js](https://wallabyjs.com/), which is a significantly more comprehensive and covers a lot more editors, if this extension interests you - check out that too.
 
-#### Contribute
+### Contribute
 
 Stick to imposed codestyle:
 
