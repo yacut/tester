@@ -139,8 +139,15 @@
       "default": "after",
       "order": 11
     },
+    "showNotifications": {
+      "title": "Show notifications after test run",
+      "description": "Should show notifications after test run if editor not active?",
+      "type": "boolean",
+      "default": true,
+      "order": 12
+    },
     "experimental":{
-      "order": 12,
+      "order": 13,
       "type": "object",
       "properties": {
         "testAllOpenedOnAnySave": {
