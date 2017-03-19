@@ -55,7 +55,7 @@
   },
   "configSchema": {
     "testOnChange": {
-      "title": "Test on Change",
+      "title": "Test on Change (if test provider support it)",
       "description": "Test files while typing, without the need to save? (restart required)",
       "type": "boolean",
       "default": false,
@@ -151,7 +151,7 @@
       "type": "object",
       "properties": {
         "testAllOpenedOnAnySave": {
-          "title": "Test all opened files on any save action",
+          "title": "Test *all* opened files on *any* save action",
           "description": "Should test all opened files if something was saved?",
           "type": "boolean",
           "default": false,

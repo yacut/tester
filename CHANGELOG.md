@@ -56,3 +56,8 @@
 
 ## 0.3.0
 * add inline error messages
+
+## 0.3.1
+* add experimental feature - test all opened after any save
+* fix status tiny
+* improve pop-up notifications
