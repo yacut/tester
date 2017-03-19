@@ -14,14 +14,28 @@ Tester is a test runner for the hackable [Atom Editor](http://atom.io). Addition
 
 ### Base Features
 - IDE based Feedback
-  - Gutter test result markers ![gutter-markers](https://raw.githubusercontent.com/yacut/tester/master/resources/gutter-markers.png)
-  - Pop-Up notification with test results ![notification](https://raw.githubusercontent.com/yacut/tester/master/resources/notification.png)
-  - In-line error messages ![inline-error](https://raw.githubusercontent.com/yacut/tester/master/resources/inline-error.png)
-  - Console test output ![console-output](https://raw.githubusercontent.com/yacut/tester/master/resources/console-output.png)
+
+  - Gutter test result markers
+
+    ![gutter-markers](https://raw.githubusercontent.com/yacut/tester/master/resources/gutter-markers.png)
+
+  - Pop-Up notification with test results
+
+    ![notification](https://raw.githubusercontent.com/yacut/tester/master/resources/notification.png)
+
+  - In-line error messages
+
+    ![inline-error](https://raw.githubusercontent.com/yacut/tester/master/resources/inline-error.png)
+
+  - Console test output
+
+    ![console-output](https://raw.githubusercontent.com/yacut/tester/master/resources/console-output.png)
+
 - Session based test watching
   - Test file on open
   - Test file after save
-- Supported test frameworks:
+
+- Supported test frameworks (for now):
   * [Mocha](https://mochajs.org/)
   * [Jest](https://github.com/facebook/jest)
   * [PHPUnit](https://phpunit.de/)
