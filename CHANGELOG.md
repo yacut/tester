@@ -61,3 +61,6 @@
 * add experimental feature - test all opened after any save
 * fix status tiny
 * improve pop-up notifications
+
+## 0.3.2
+* fix #6
