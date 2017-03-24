@@ -1,4 +1,4 @@
-## 0.3.3
+## 0.3.4
 * add loading spinner to output view
 
 ## 0.3.2
