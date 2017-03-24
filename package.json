@@ -2,7 +2,7 @@
   "name": "tester",
   "main": "./lib/tester",
   "author": "yacut",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A interactive test runner with IDE based Feedback",
   "keywords": [
     "test",
@@ -93,7 +93,7 @@
       "title": "Show output after test run",
       "description": "Show output after test run?",
       "type": "boolean",
-      "default": true,
+      "default": false,
       "order": 6
     },
     "gutterPosition": {
@@ -125,7 +125,7 @@
       "title": "Show errors inline after test run",
       "description": "Should show errors in text editor after test run?",
       "type": "boolean",
-      "default": true,
+      "default": false,
       "order": 10
     },
     "inlineErrorPosition": {
