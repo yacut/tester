@@ -137,8 +137,8 @@
       "type": "object",
       "properties": {
         "testAllOpenedOnAnySave": {
-          "title": "Test `ALL` opened files on `ANY` save action.",
-          "description": "Should test all opened files if something was saved?",
+          "title": "Test all opened files on any save action.",
+          "description": "Should test `ALL` opened files if something was saved?",
           "type": "boolean",
           "default": false,
           "order": 1
