@@ -96,11 +96,13 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
   }
 }
 
-.tester.output-view {
+.tester-output-view {
 
 	.output {
 	  overflow  : auto;
 		background-color: inherit;
+    height: 200px;
+    max-height: 200px;
 	}
 
   &.loading {
@@ -108,6 +110,10 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 32px;
+  }
+
+  .tester-panel-buttons {
+    margin-right: 10px;
   }
 }
 
