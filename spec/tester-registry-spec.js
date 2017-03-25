@@ -57,34 +57,6 @@ describe('TesterRegistry', () => {
       expect(timesUpdated).toBe(1);
       expect(timesFinished).toBe(1);
     });
-    it('update if the buffer it was associated to was destroyed', async () => {
-      atom.config.set('tester.testOnChange', true);
-      let timesBegan = 0;
-      let timesUpdated = 0;
-      let timesFinished = 0;
-
-      testerRegistry.onDidBeginTesting(() => {
-        timesBegan += 1;
-      });
-      testerRegistry.onDidFinishTesting(() => {
-        timesFinished += 1;
-      });
-      testerRegistry.onDidUpdateMessages(() => {
-        timesUpdated += 1;
-      });
-
-      const tester = getTester();
-      const editor = atom.workspace.getActiveTextEditor();
-      testerRegistry.addTester(tester);
-      editor.destroy();
-      const promise = testerRegistry.test(getEditorTester(editor));
-      expect(timesBegan).toBe(1);
-      expect(timesUpdated).toBe(0);
-      expect(timesFinished).toBe(0);
-      expect(await promise).toBe(true);
-      expect(timesUpdated).toBe(1);
-      expect(timesFinished).toBe(1);
-    });
     it('triggers the finish event even when the provider crashes', async () => {
       let timesBegan = 0;
       let timesUpdated = 0;

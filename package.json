@@ -54,79 +54,65 @@
     "jasmine-fix": "^1.0.1"
   },
   "configSchema": {
-    "testOnChange": {
-      "title": "Test on Change (if test provider support it)",
-      "description": "Test files while typing, without the need to save? (restart required)",
-      "type": "boolean",
-      "default": false,
-      "order": 1
-    },
-    "testOnChangeInterval": {
-      "title": "Test on Change Interval",
-      "description": "For how many seconds should the tester wait?",
-      "type": "integer",
-      "default": 1,
-      "order": 2
-    },
     "testOnOpen": {
       "title": "Test on Open",
-      "description": "Test files on open?",
+      "description": "Should test files on open?",
       "type": "boolean",
       "default": true,
-      "order": 3
+      "order": 1
     },
     "testOnSave": {
       "title": "Test on Save",
-      "description": "Test files on save?",
+      "description": "Should test files on save?",
       "type": "boolean",
       "default": true,
-      "order": 4
+      "order": 2
     },
     "messageTimeout": {
       "title": "Output view timeout",
       "description": "For how many seconds should the output view above the status-bar stay open?",
       "type": "integer",
       "default": 5,
-      "order": 5
+      "order": 3
     },
     "showOutputAfterTestRun": {
       "title": "Show output after test run",
-      "description": "Show output after test run?",
+      "description": "Should show output after test run?",
       "type": "boolean",
       "default": false,
-      "order": 6
+      "order": 4
+    },
+    "gutterEnabled": {
+      "title": "Gutter Enabled",
+      "description": "Should show test results in gutter highlights?",
+      "type": "boolean",
+      "default": true,
+      "order": 5
     },
     "gutterPosition": {
       "title": "Gutter Position",
-      "description": "Position of Gutter Highlights?",
+      "description": "Where should be the position of the gutter highlights?",
       "enum": [
         "Left",
         "Right"
       ],
       "type": "string",
       "default": "Right",
-      "order": 7
-    },
-    "gutterEnabled": {
-      "title": "Gutter Enabled",
-      "description": "Highlight Error Lines in Gutter?",
-      "type": "boolean",
-      "default": true,
-      "order": 8
+      "order": 6
     },
     "ansiToHtml": {
       "title": "Convert ansi console output to html",
       "description": "If console output has ansi colors should it convert to html colors?",
       "type": "boolean",
       "default": true,
-      "order": 9
+      "order": 7
     },
     "showInlineError": {
       "title": "Show errors inline after test run",
       "description": "Should show errors in text editor after test run?",
       "type": "boolean",
       "default": false,
-      "order": 10
+      "order": 8
     },
     "inlineErrorPosition": {
       "title": "Inline error position",
@@ -137,21 +123,21 @@
         "before"
       ],
       "default": "after",
-      "order": 11
+      "order": 9
     },
     "showNotifications": {
       "title": "Show notifications after test run",
       "description": "Should show notifications after test run if editor not active?",
       "type": "boolean",
       "default": true,
-      "order": 12
+      "order": 10
     },
     "experimental": {
-      "order": 13,
+      "order": 11,
       "type": "object",
       "properties": {
         "testAllOpenedOnAnySave": {
-          "title": "Test *all* opened files on *any* save action",
+          "title": "Test `ALL` opened files on `ANY` save action.",
           "description": "Should test all opened files if something was saved?",
           "type": "boolean",
           "default": false,
