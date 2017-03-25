@@ -1,3 +1,6 @@
+## 0.4.1
+* fix output view resize limitations
+
 ## 0.4.0
 * remove 'testOnChagne' feature
 * make output view resizable
