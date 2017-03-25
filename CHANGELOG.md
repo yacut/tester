@@ -1,3 +1,8 @@
+## 0.4.0
+* remove 'testOnChagne' feature
+* make output view resizable
+* fix errors if test finished and editor was closed
+
 ## 0.3.4
 * add loading spinner to output view
 
