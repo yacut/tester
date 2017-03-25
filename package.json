@@ -132,6 +132,13 @@
       "default": true,
       "order": 10
     },
+    "scrollToBottom": {
+      "title": "Scroll console output to bottom after test run",
+      "description": "Should scroll console output to bottom after test run?",
+      "type": "boolean",
+      "default": true,
+      "order": 11
+    },
     "experimental": {
       "order": 11,
       "type": "object",
