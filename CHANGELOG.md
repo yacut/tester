@@ -1,3 +1,8 @@
+## 0.4.4
+* set default inline message position to tail
+* fix tail styles
+* fix inline error message format
+ 
 ## 0.4.3
 * add tail option for inline messages
 
