@@ -123,7 +123,7 @@
         "before",
         "tail"
       ],
-      "default": "after",
+      "default": "tail",
       "order": 9
     },
     "showNotifications": {
