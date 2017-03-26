@@ -1,3 +1,8 @@
+## 0.4.2
+* fix scroll after test
+* add scroll console output to bottom setting
+* add scroll to bottom and top button to view
+
 ## 0.4.1
 * fix output view resize limitations
 
