@@ -1,3 +1,6 @@
+## 0.4.3
+* add tail option for inline messages
+
 ## 0.4.2
 * fix scroll after test
 * add scroll console output to bottom setting
