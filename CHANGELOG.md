@@ -1,8 +1,11 @@
+## 0.4.5
+* add 'read more' function on click for inline messages
+
 ## 0.4.4
 * set default inline message position to tail
 * fix tail styles
 * fix inline error message format
- 
+
 ## 0.4.3
 * add tail option for inline messages
 
