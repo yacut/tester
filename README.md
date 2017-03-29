@@ -125,3 +125,10 @@ Stick to imposed codestyle:
 
 * `$ npm i`
 * `$ npm test`
+
+### Roadmap
+
+* add unknown status for test which not ran
+* replace all views with react components
+* add table view with results similar to nuclide diagnostics (react+redux)
+* add `run all project tests` command
