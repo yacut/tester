@@ -83,7 +83,19 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
       border-bottom: 1px dashed @background-color-success;
     }
   }
-
+  &.unknown {
+    &:not(.line-number){
+      background-color: #939395;
+      color: contrast(#939395);
+    }
+    .tester-gutter{
+      color: #939395;
+    }
+    .region {
+      border-bottom: 1px dashed #939395;
+    }
+  }
+  
   // Used by bottom status icon
   &.status-failed {
     color: @background-color-error;
