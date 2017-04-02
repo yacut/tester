@@ -1,3 +1,6 @@
+## 0.4.6
+* add unknown state with inline messages
+
 ## 0.4.5
 * add 'read more' function on click for inline messages
 
