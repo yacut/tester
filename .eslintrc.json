@@ -1,17 +1,22 @@
 {
-    "extends": "airbnb-base",
+    "extends": "airbnb",
+    "parser": "babel-eslint",
     "plugins": [
-        "import"
+        "react",
+        "jsx-a11y",
+        "import",
+        "flowtype"
     ],
-    "globals": {
-      "atom": "true",
-      "document": "true",
-      "expect": "true",
-      "spyOn": "true"
-    },
     "env": {
-      "node": true,
-      "mocha": true
+      "atomtest": true,
+      "es6": true,
+      "jasmine": true,
+      "node": true
+    },
+    "globals": {
+      "atom": false,
+      "document": true,
+      "window": true
     },
     "rules": {
       "import/extensions": 0,
@@ -25,6 +30,7 @@
       "no-useless-escape": 0,
       "prefer-rest-params": 0,
       "max-len": 0,
-      "spaced-comment": ["error", "always", { "block": { "exceptions": ["@flow"] } }]
+      "react/jsx-filename-extension": 0,
+      "react/sort-comp": 0
     }
 }
