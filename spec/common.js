@@ -1,12 +1,14 @@
-/* @flow */
+'use babel';
+
+// @flow
 
 import Path from 'path';
 
-export function getTester()/* : Object*/ {
+export function getTester() : Object {
   return {
     name: 'tester-name',
     options: {},
-    scopes: ['**/test/*.js', '**/*spec.js'],
+    scopes: ['*test.js', '**spec.js'],
     test() {
       // Note, a Promise may be returned as well!
       return {
@@ -32,16 +34,10 @@ export function getTester()/* : Object*/ {
   };
 }
 
-export function getMessage(param/* : ?(boolean | string)*/)/* : Object*/ {
-  const message/* : Object*/ = { severity: 'error', excerpt: String(Math.random()), location: { file: __filename, position: [[0, 0], [0, 0]] } };
-  message.location.file = param;
-  return message;
-}
-
-export function getFixturesPath(path/* : string*/)/* : string*/ {
+export function getFixturesPath(path : string) : string {
   return Path.join(__dirname, 'fixtures', path);
 }
 
-export function getEditorTester(textEditor/* : any*/)/* : any*/ {
+export function getEditorTester(textEditor : any) : any {
   return { editor: textEditor };
 }

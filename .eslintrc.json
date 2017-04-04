@@ -1,5 +1,5 @@
 {
-    "extends": "airbnb",
+    "extends": "airbnb-base",
     "parser": "babel-eslint",
     "plugins": [
         "react",
@@ -10,11 +10,10 @@
     "env": {
       "atomtest": true,
       "es6": true,
-      "jasmine": true,
-      "node": true
+      "jasmine": true
     },
     "globals": {
-      "atom": false,
+      "atom": true,
       "document": true,
       "window": true
     },
@@ -25,12 +24,18 @@
       "no-restricted-syntax": 0,
       "strict": 0,
       "class-methods-use-this": 0,
-      "no-console": 0,
       "no-param-reassign": 0,
       "no-useless-escape": 0,
       "prefer-rest-params": 0,
-      "max-len": 0,
       "react/jsx-filename-extension": 0,
-      "react/sort-comp": 0
+      "react/sort-comp": 0,
+      "no-return-assign": 0,
+      "no-unused-vars": ["error", { "varsIgnorePattern": "^atom$" }],
+      "no-underscore-dangle": 0,
+      "no-plusplus": 0,
+      "consistent-return": 0,
+      "global-require": 0,
+      "max-len": [2, 150],
+      "no-console": [1, { "allow": ["warn", "error"] }]
     }
 }

@@ -6,7 +6,7 @@ describe('Some mocha tests', () => {
   });
 
   it.skip('should skip test', () => {
-    console.info('no console log on skipped test');
+    // skiiped test
   });
 
   it('should compare dates', () => {
