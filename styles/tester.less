@@ -95,7 +95,7 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
       border-bottom: 1px dashed #939395;
     }
   }
-  
+
   // Used by bottom status icon
   &.status-failed {
     color: @background-color-error;
@@ -128,6 +128,19 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
     border: 1px solid @base-border-color;
     color: @text-color-highlight;
     border-radius: @component-border-radius;
+  }
+
+  .tester-panel-scroll-bottom {
+    cursor: pointer;
+  }
+  .tester-panel-scroll-top {
+    cursor: pointer;
+  }
+  .tester-panel-clear {
+    cursor: pointer;
+  }
+  .tester-panel-close {
+    cursor: pointer;
   }
 }
 
@@ -180,4 +193,14 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
 .tester-inline-message-tail {
   margin-top: -1.6em;
   margin-left: 1em;
+}
+
+.tester-resize-handle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  cursor: row-resize;
+  z-index: 3;
 }
