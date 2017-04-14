@@ -41,12 +41,7 @@
     "atom-space-pen-views": "^2.2.0",
     "etch": "^0.12.1",
     "glob-to-regexp": "^0.3.0",
-    "lodash": "^4.17.4",
-    "rc-table": "^5.3.0",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "rxjs": "^5.3.0",
-    "sb-debounce": "^1.0.2"
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
@@ -58,8 +53,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
-    "flow-bin": "^0.43.0",
-    "jasmine-fix": "^1.0.1"
+    "flow-bin": "^0.43.0"
   },
   "configSchema": {
     "testOnOpen": {
