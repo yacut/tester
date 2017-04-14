@@ -40,7 +40,6 @@
     "atom-package-deps": "^4.4.1",
     "etch": "^0.12.1",
     "glob-to-regexp": "^0.3.0",
-    "lodash": "^4.17.4",
     "sb-debounce": "^1.0.2"
   },
   "devDependencies": {
