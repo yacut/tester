@@ -145,19 +145,24 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
 }
 
 .tester-messages {
+  padding-left: 6px;
+  padding-right: 3px;
+
   .tester-message-header {
     width: 100%;
   }
   .tester-message-row {
     width: 100%;
-    height: 1.5em;
+  }
+  .tester-message-row:nth-child(odd){
+    background-color: @tool-panel-background-color;
   }
   .tester-message-row:hover{
     background-color: @panel-heading-border-color;
     color: @text-color-selected;
   }
   .tester-message-cell {
-    border-right: 1px solid @panel-heading-border-color;
+    border-left: 1px solid @panel-heading-border-color;
     overflow: hidden;
   }
   .tester-message-state {
@@ -175,6 +180,11 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
   .tester-message-location {
     min-width: 50px;
     width: 25%;
+  }
+  .tester-empty-container {
+    font-style: italic;
+    padding: 1em;
+    text-align: center;
   }
 }
 
