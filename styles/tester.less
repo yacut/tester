@@ -148,8 +148,19 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
   .tester-message-row {
     width: 100%;
   }
+  .tester-message-row:hover{
+    background-color: @panel-heading-border-color;
+    color: @text-color-selected;
+  }
+  .tester-message-cell {
+    border-right: 1px solid @panel-heading-border-color;
+    overflow: hidden;
+  }
   .tester-message-state {
     width: 5rem;
+  }
+  .tester-message-duration {
+    width: 3rem;
   }
 }
 
