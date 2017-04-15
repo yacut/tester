@@ -1,6 +1,5 @@
 /* @flow */
 
-import { it, beforeEach } from 'jasmine-fix';
 import EditorRegistry from '../lib/editor-registry';
 
 describe('EditorRegistry', () => {

@@ -2,8 +2,13 @@
 
 /* @flow */
 
-import { it, wait, beforeEach } from 'jasmine-fix';
 import EditorTester from '../lib/editor-tester';
+
+function wait(timeout) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, timeout);
+  });
+}
 
 describe('EditorTester', () => {
   let textEditor;

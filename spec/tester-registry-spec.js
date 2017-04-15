@@ -1,6 +1,5 @@
 /* @flow */
 
-import { it, beforeEach } from 'jasmine-fix';
 import TesterRegistry from '../lib/tester-registry';
 import { getEditorTester, getTester, getFixturesPath } from './common';
 

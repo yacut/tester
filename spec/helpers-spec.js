@@ -1,7 +1,6 @@
 /* @flow */
 
 import { Disposable } from 'atom';
-import { it } from 'jasmine-fix';
 import * as Helpers from '../lib/helpers';
 
 describe('Helpers', () => {

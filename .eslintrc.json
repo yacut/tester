@@ -10,6 +10,7 @@
     "env": {
       "atomtest": true,
       "es6": true,
+      "node": true,
       "jasmine": true
     },
     "globals": {
@@ -36,6 +37,7 @@
       "consistent-return": 0,
       "global-require": 0,
       "max-len": [2, 150],
+      "no-nested-ternary": 0,
       "no-console": [1, { "allow": ["warn", "error"] }]
     }
 }
