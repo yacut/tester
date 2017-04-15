@@ -156,10 +156,16 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
     cursor: pointer;
     background-color: @panel-heading-background-color !important;
     font-weight: 700;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .tester-message-row {
     width: 100%;
     cursor: pointer;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .tester-message-row:nth-child(odd){
     background-color: @background-color-highlight;
@@ -172,6 +178,7 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
     border-left: 1px solid @panel-heading-border-color;
     overflow: hidden;
     padding: 2px 4px;
+    white-space: nowrap;
   }
   .tester-message-state {
     min-width: 5rem;
