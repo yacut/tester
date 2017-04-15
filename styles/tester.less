@@ -154,7 +154,7 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
   .tester-message-header {
     width: 100%;
     cursor: pointer;
-    background-color: @inset-panel-background-color !important;
+    background-color: @panel-heading-background-color !important;
     font-weight: 700;
   }
   .tester-message-row {
@@ -162,7 +162,7 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
     cursor: pointer;
   }
   .tester-message-row:nth-child(odd){
-    background-color: @panel-heading-background-color;
+    background-color: @background-color-highlight;
   }
   .tester-message-row:hover{
     background-color: @panel-heading-border-color;
@@ -171,6 +171,7 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
   .tester-message-cell {
     border-left: 1px solid @panel-heading-border-color;
     overflow: hidden;
+    padding: 2px 4px;
   }
   .tester-message-state {
     min-width: 5rem;
