@@ -110,6 +110,9 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
 
 .tester-output-view {
   height: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
 
 	.output {
 	  overflow: auto;
@@ -151,8 +154,11 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
 }
 
 .tester-messages {
-  height: -webkit-calc(100% - 2.5em);
+  height: 100%;
   width: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
 
   div {
     margin-right: 0px !important;
