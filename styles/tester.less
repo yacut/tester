@@ -151,16 +151,15 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
 }
 
 .tester-messages {
-  padding-left: 6px;
-  padding-right: 3px;
-  height: 100%;
+  height: -webkit-calc(100% - 2.5em);
   width: 100%;
+
   div {
     margin-right: 0px !important;
   }
 
   .tester-messages-container {
-    height: -webkit-calc(100% - 4em);
+    height: 100%;
     width: 100%;
     overflow: auto;
   }
@@ -215,7 +214,7 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
   }
   .tester-message-location {
     min-width: 50px;
-    width: 10%;
+    width: 15%;
   }
   .tester-empty-container {
     font-style: italic;
