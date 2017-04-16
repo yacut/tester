@@ -161,7 +161,6 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
 
   .tester-messages-container {
     height: -webkit-calc(100% - 4em);
-    height: calc(100% - 4em);
     width: 100%;
     overflow: auto;
   }
@@ -174,12 +173,15 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
     word-break: break-word;
     text-overflow: ellipsis;
     white-space: nowrap;
+    display: flex;
   }
   .tester-message-row {
     cursor: pointer;
     word-break: break-word;
     text-overflow: ellipsis;
     white-space: nowrap;
+    display: flex;
+    -webkit-user-select: text;
   }
   .tester-message-row:nth-child(odd){
     background-color: @background-color-highlight;
@@ -192,27 +194,28 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
     border-left: 1px solid @panel-heading-border-color;
     overflow: hidden;
     padding: 2px 4px;
-    white-space: nowrap;
+    word-break: break-word;
+    text-overflow: inherit;
   }
   .tester-message-state {
     min-width: 5rem;
-    width: 5rem;
+    width: 5%;
   }
   .tester-message-duration {
     min-width: 5rem;
-    width: 5rem;
+    width: 5%;
   }
   .tester-message-title {
     min-width: 50px;
-    width: 200px;
+    width: 25%;
   }
   .tester-message-error {
     min-width: 50px;
-    width: 500px;
+    width: 50%;
   }
   .tester-message-location {
     min-width: 50px;
-    width: 200px;
+    width: 10%;
   }
   .tester-empty-container {
     font-style: italic;
