@@ -44,6 +44,10 @@
               "command": "tester:test"
             },
             {
+              "label": "Test Project",
+              "command": "tester:test-project"
+            },
+            {
               "label": "Stop",
               "command": "tester:stop"
             }
