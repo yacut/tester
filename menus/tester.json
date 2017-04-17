@@ -2,8 +2,21 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Toggle tester output",
-        "command": "tester:toggle-tester-output"
+        "label": "Tester",
+        "submenu": [
+          {
+            "label": "Toggle console output",
+            "command": "tester:toggle-tester-output"
+          },
+          {
+            "label": "Toggle result view",
+            "command": "tester:toggle-tester-result"
+          },
+          {
+            "label": "Toggle full size inline errors",
+            "command": "tester:toggle-full-size-inline-errors"
+          }
+        ]
       }
     ]
   },
@@ -17,6 +30,10 @@
             {
               "label": "Toggle tester output",
               "command": "tester:toggle-tester-output"
+            },
+            {
+              "label": "Toggle tester result view",
+              "command": "tester:toggle-tester-result"
             },
             {
               "label": "Toggle full size inline errors",
