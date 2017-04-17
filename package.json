@@ -140,8 +140,34 @@
       "default": true,
       "order": 11
     },
+    "showStatusBar": {
+      "title": "Show status bar",
+      "description": "Should show status bar?",
+      "type": "boolean",
+      "default": true,
+      "order": 12
+    },
+    "statusBarOnClick": {
+      "title": "Status Bar on click",
+      "description": "What should opens on status bar click?",
+      "type": "string",
+      "enum": [
+        "console",
+        "results",
+        "both"
+      ],
+      "default": "both",
+      "order": 13
+    },
+    "softWrapDefault": {
+      "title": "Soft Wrap default",
+      "description": "Should wrap the text in results view?",
+      "type": "boolean",
+      "default": true,
+      "order": 14
+    },
     "experimental": {
-      "order": 11,
+      "order": 15,
       "type": "object",
       "properties": {
         "testAllOpenedOnAnySave": {
