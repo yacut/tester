@@ -54,9 +54,6 @@
     "eslint-plugin-react": "^6.10.3",
     "flow-bin": "^0.43.0"
   },
-  "deserializers": {
-    "tester-result-view/ResultView": "deserializeResultView"
-  },
   "configSchema": {
     "testOnOpen": {
       "title": "Test on Open",
