@@ -127,6 +127,13 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
   line-height: 2.5em;
 }
 
+.tester-button-wait {
+  opacity: 1;
+  background-image: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.15) 50%);
+  background-size: 10px 100%;
+  -webkit-animation: available-package-is-installing 0.5s linear infinite;
+}
+
 .tester-messages {
   height: 100%;
   width: 100%;
@@ -204,12 +211,6 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
     border-top: 1px solid @panel-heading-border-color;
     border-bottom: 1px solid @panel-heading-border-color;
     padding-bottom: 4px;
-  }
-  .tester-button-wait {
-    opacity: 1;
-    background-image: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.15) 50%);
-    background-size: 10px 100%;
-    -webkit-animation: available-package-is-installing 0.5s linear infinite;
   }
 }
 
