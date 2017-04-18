@@ -80,7 +80,7 @@ export function provideTester() {
     name: 'tester-name',
     options: {},
     scopes: ['**/test/*.js', '**/*spec.js'],
-    test(textEditor) {
+    test(textEditor/* or null e.g. to run all tests*/) {
       // Note, a Promise may be returned as well!
       return {
         messages: [
@@ -125,9 +125,3 @@ Stick to imposed codestyle:
 
 * `$ npm i`
 * `$ npm test`
-
-### Roadmap
-
-* replace all views with react components
-* add table view with results similar to nuclide diagnostics (react+redux)
-* add `run all project tests` command
