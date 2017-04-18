@@ -2113,10 +2113,6 @@ sb-callsite@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/sb-callsite/-/sb-callsite-1.1.2.tgz#28191fb66d64e3a3ee92084a95a90fcb5102243b"
 
-sb-debounce@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/sb-debounce/-/sb-debounce-1.0.2.tgz#6ae2551f364a0d52eeb3ce297953a8ca5f4e72ea"
-
 sb-exec@^3.0.1:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/sb-exec/-/sb-exec-3.1.0.tgz#34cc65088a116752eb720fddeff66d2c2e95ec51"
@@ -2344,6 +2340,16 @@ typedarray@^0.0.6:
 uid-number@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/uid-number/-/uid-number-0.0.6.tgz#0ea10e8035e8eb5b8e4449f06da1c730663baa81"
+
+underscore-plus@^1.6.6:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/underscore-plus/-/underscore-plus-1.6.6.tgz#65ecde1bdc441a35d89e650fd70dcf13ae439a7d"
+  dependencies:
+    underscore "~1.6.0"
+
+underscore@~1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.6.0.tgz#8b38b10cacdef63337b8b24e4ff86d45aea529a8"
 
 user-home@^1.1.1:
   version "1.1.1"

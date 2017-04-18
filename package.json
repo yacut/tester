@@ -39,7 +39,8 @@
     "ansi-to-html": "^0.6.0",
     "atom-package-deps": "^4.4.1",
     "etch": "^0.12.1",
-    "glob-to-regexp": "^0.3.0"
+    "glob-to-regexp": "^0.3.0",
+    "underscore-plus": "^1.6.6"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
