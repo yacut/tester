@@ -80,7 +80,7 @@ export function provideTester() {
     name: 'tester-name',
     options: {},
     scopes: ['**/test/*.js', '**/*spec.js'],
-    test(textEditor/* or null e.g. to run all tests*/) {
+    test(textEditor/* or null e.g. to run all tests*/, additionalArgs/*from results views*/) {
       // Note, a Promise may be returned as well!
       return {
         messages: [
