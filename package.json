@@ -165,19 +165,6 @@
       "type": "boolean",
       "default": true,
       "order": 14
-    },
-    "experimental": {
-      "order": 15,
-      "type": "object",
-      "properties": {
-        "testAllOpenedOnAnySave": {
-          "title": "Test all opened files on any save action.",
-          "description": "Should test `ALL` opened files if something was saved?",
-          "type": "boolean",
-          "default": false,
-          "order": 1
-        }
-      }
     }
   }
 }
