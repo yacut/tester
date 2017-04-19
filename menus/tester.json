@@ -15,6 +15,14 @@
           {
             "label": "Toggle full size inline errors",
             "command": "tester:toggle-full-size-inline-errors"
+          },
+          {
+            "label": "Test",
+            "command": "tester:test"
+          },
+          {
+            "label": "Stop",
+            "command": "tester:stop"
           }
         ]
       }

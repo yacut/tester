@@ -1,5 +1,6 @@
 {
   "atom-workspace": {
-    "ctrl-alt-t": "tester:toggle-tester-output"
+    "ctrl-alt-t": "tester:toggle-tester-result",
+    "ctrl-alt-shift-p": "tester:test-project"
   }
 }
