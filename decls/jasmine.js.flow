@@ -5,6 +5,7 @@ declare function fit(name: string, callback: Function): ?Promise<void>;
 declare function spyOn(object: Object, property: string): Object;
 declare function expect(value: any): Object;
 declare function describe(name: string, callback: Function): ?Promise<void>;
+declare function xdescribe(name: string, callback: Function): ?Promise<void>;
 declare function fdescribe(name: string, callback: Function): ?Promise<void>;
 declare function beforeEach(callback: Function): ?Promise<void>;
 declare function afterEach(callback: Function): ?Promise<void>;

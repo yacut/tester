@@ -46,9 +46,8 @@ describe('TesterRegistry', () => {
       });
 
       const tester = getTester();
-      const editor = atom.workspace.getActiveTextEditor();
       testerRegistry.addTester(tester);
-      const promise = testerRegistry.test(getEditorTester(editor));
+      const promise = testerRegistry.test(null, true);
       expect(timesBegan).toBe(1);
       expect(timesUpdated).toBe(0);
       expect(timesFinished).toBe(0);
@@ -72,10 +71,9 @@ describe('TesterRegistry', () => {
       });
 
       const tester = getTester();
-      const editor = atom.workspace.getActiveTextEditor();
       testerRegistry.addTester(tester);
       tester.test = function test() { throw new Error('Boom'); };
-      const promise = testerRegistry.test(getEditorTester(editor));
+      const promise = testerRegistry.test(null, true);
       expect(timesBegan).toBe(1);
       expect(timesUpdated).toBe(0);
       expect(timesFinished).toBe(0);

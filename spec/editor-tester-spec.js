@@ -1,7 +1,7 @@
 'use babel';
 
 /* @flow */
-
+import { TextBuffer, TextEditor } from 'atom';
 import EditorTester from '../lib/editor-tester';
 
 function wait(timeout) {
@@ -14,8 +14,8 @@ describe('EditorTester', () => {
   let textEditor;
 
   beforeEach(async () => {
-    await atom.workspace.open(`${__dirname}/fixtures/test.txt`);
-    textEditor = atom.workspace.getActiveTextEditor();
+    const buffer = new TextBuffer({ text: 'some text' });
+    textEditor = new TextEditor({ buffer, largeFileMode: true });
   });
   afterEach(() => {
     atom.workspace.destroyActivePaneItem();
