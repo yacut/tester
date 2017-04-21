@@ -19,10 +19,6 @@ Tester is a test runner for the hackable [Atom Editor](http://atom.io). Addition
 
     ![gutter-markers](https://raw.githubusercontent.com/yacut/tester/master/resources/gutter-markers.png)
 
-  - Pop-Up notification with test results
-
-    ![notification](https://raw.githubusercontent.com/yacut/tester/master/resources/notification.png)
-
   - In-line error messages
 
     ![inline-error](https://raw.githubusercontent.com/yacut/tester/master/resources/inline-error.png)
@@ -30,6 +26,10 @@ Tester is a test runner for the hackable [Atom Editor](http://atom.io). Addition
   - Console test output
 
     ![console-output](https://raw.githubusercontent.com/yacut/tester/master/resources/console-output.png)
+
+  - Test result view
+
+    ![result-view](https://raw.githubusercontent.com/yacut/tester/master/resources/result-view.png)
 
 - Session based test watching
   - Test file on open
