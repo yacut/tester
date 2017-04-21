@@ -34,6 +34,7 @@ Tester is a test runner for the hackable [Atom Editor](http://atom.io). Addition
 - Session based test watching
   - Test file on open
   - Test file after save
+  - Test project
 
 - Supported test frameworks (for now):
   * [Mocha](https://mochajs.org/)
