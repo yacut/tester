@@ -133,3 +133,4 @@ Stick to imposed codestyle:
 - [x] add run all project tests command
 - [ ] implement [Redux](https://github.com/reactjs/redux)
 - [ ] implement [redux-observable](https://github.com/redux-observable/redux-observable)
+- [ ] use [Bluebird](http://bluebirdjs.com/docs/getting-started.html)
