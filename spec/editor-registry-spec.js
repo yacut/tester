@@ -109,6 +109,7 @@ describe('EditorRegistry', () => {
       });
       expect(timesDisposed).toBe(0);
       editorRegistry.activate();
+      await sleep(0);
       expect(timesDisposed).toBe(0);
       atom.workspace.destroyActivePaneItem();
       expect(timesDisposed).toBe(1);
