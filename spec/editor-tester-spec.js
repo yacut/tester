@@ -3,12 +3,7 @@
 /* @flow */
 import { TextBuffer, TextEditor } from 'atom';
 import EditorTester from '../lib/editor-tester';
-
-function wait(timeout) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, timeout);
-  });
-}
+import { sleep } from './common';
 
 describe('EditorTester', () => {
   let textEditor;
@@ -53,14 +48,14 @@ describe('EditorTester', () => {
       textEditor.save();
       textEditor.save();
       expect(timesTriggered).toBe(0);
-      await wait(10);
+      await sleep(10);
       expect(timesTriggered).toBe(1);
       textEditor.save();
       textEditor.save();
       textEditor.save();
       textEditor.save();
       expect(timesTriggered).toBe(1);
-      await wait(10);
+      await sleep(10);
       expect(timesTriggered).toBe(2);
     });
   });

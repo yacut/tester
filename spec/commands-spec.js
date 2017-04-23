@@ -4,6 +4,7 @@
 
 import Path from 'path';
 import Commands from '../lib/commands';
+import { sleep } from './common';
 
 let commands;
 
@@ -28,6 +29,8 @@ describe('Tester Commands', () => {
 
     await atom.workspace.open(Path.join(__dirname, 'fixtures', 'test.txt'));
     const textEditor = atom.views.getView(atom.workspace.getActiveTextEditor());
+    // Open events need a tick to process.
+    await sleep(0);
     expect(testCalled).toBe(0);
     expect(testProjectCalled).toBe(0);
     expect(toggleOutputCalled).toBe(0);

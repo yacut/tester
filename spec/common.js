@@ -41,3 +41,7 @@ export function getFixturesPath(path : string) : string {
 export function getEditorTester(textEditor : any) : any {
   return { editor: textEditor };
 }
+
+export function sleep(milliSeconds: number): Promise<void> {
+  return new Promise((resolve) => { setTimeout(resolve, milliSeconds); });
+}
