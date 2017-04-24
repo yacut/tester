@@ -4,6 +4,23 @@
 
 import Path from 'path';
 
+export const messages = [
+  {
+    duration: 1, // duration in ms
+    error: {
+      name: 'optional error object',
+      message: 'something went wrong',
+      actual: 'optional actual result', // can be an object
+      expected: 'optional expected result', // can be an object
+      operator: 'optional operator',
+    },
+    filePath: 'file path to highlight',
+    lineNumber: 1, // line number to highlight
+    state: 'failed', // 'passed' | 'failed' | 'skipped',
+    title: 'some test title',
+  },
+];
+
 export function getTester() : Object {
   return {
     name: 'tester-name',
@@ -12,22 +29,7 @@ export function getTester() : Object {
     test() {
       // Note, a Promise may be returned as well!
       return {
-        messages: [
-          {
-            duration: 1, // duration in ms
-            error: {
-              name: 'optional error object',
-              message: 'something went wrong',
-              actual: 'optional actual result', // can be an object
-              expected: 'optional expected result', // can be an object
-              operator: 'optional operator',
-            },
-            filePath: 'file path to highlight',
-            lineNumber: 1, // line number to highlight
-            state: 'failed', // 'passed' | 'failed' | 'skipped',
-            title: 'some test title',
-          },
-        ],
+        messages,
         output: 'tester console output',
       };
     },
