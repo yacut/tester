@@ -124,7 +124,7 @@ Stick to imposed codestyle:
 ### Roadmap
 
 - [x] add unknown status for test which not ran
-- [x] replace all views with react components
+- [x] replace all views with react components (etch)
 - [x] add table view with results similar to nuclide diagnostics
   - [ ] sort data by column head
   - [ ] resize column
@@ -133,4 +133,3 @@ Stick to imposed codestyle:
 - [x] add run all project tests command
 - [ ] implement [Redux](https://github.com/reactjs/redux)
 - [ ] implement [redux-observable](https://github.com/redux-observable/redux-observable)
-- [ ] use [Bluebird](http://bluebirdjs.com/docs/getting-started.html)
