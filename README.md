@@ -116,9 +116,9 @@ I'd like to give a shout out to [Wallaby.js](https://wallabyjs.com/), which is a
 
 ### Contribute
 
-Stick to imposed codestyle:
+Stick to imposed code style:
 
-* `$ npm i`
+* `$ npm install`
 * `$ npm test`
 
 ### Roadmap
@@ -126,10 +126,10 @@ Stick to imposed codestyle:
 - [x] add unknown status for test which not ran
 - [x] replace all views with react components (etch)
 - [x] add table view with results similar to nuclide diagnostics
-  - [ ] sort data by column head
-  - [ ] resize column
+  - [ ] sort data by column head click
   - [x] quick set additional args for test runner
   - [x] merge results from each test runner
+  - [ ] re-sizable columns
+  - [ ] side by side diff view for expectations
 - [x] add run all project tests command
-- [ ] implement [Redux](https://github.com/reactjs/redux)
-- [ ] implement [redux-observable](https://github.com/redux-observable/redux-observable)
+- [ ] implement [Redux](https://github.com/reactjs/redux) and [redux-observable](https://github.com/redux-observable/redux-observable) for result view
