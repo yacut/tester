@@ -16,14 +16,14 @@ describe('EditorTester', () => {
     atom.workspace.destroyActivePaneItem();
   });
 
-  describe('::constructor', () => {
-    it('is a saint', () => {
+  describe('When creating a new EditorTester', () => {
+    it('shoud not throw', () => {
       expect(() => new EditorTester()).not.toThrow();
     });
   });
 
-  describe('onDidDestroy', () => {
-    it('is called when text editor is destroyed', () => {
+  describe('When destroy event is called', () => {
+    it('should call onDidDestroy callback from EditorTester', () => {
       let triggered = false;
       const editor = new EditorTester(textEditor);
       editor.onDidDestroy(() => {
@@ -35,8 +35,8 @@ describe('EditorTester', () => {
     });
   });
 
-  describe('onShouldTest', () => {
-    it('is triggered on save', async () => {
+  describe('When saving a TextEditor', () => {
+    it('should trigger onShouldTest event', async () => {
       atom.config.set('tester.testOnSave', true);
       let timesTriggered = 0;
       const editor = new EditorTester(textEditor);

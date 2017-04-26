@@ -18,20 +18,20 @@ describe('EditorRegistry', () => {
     await sleep(0);
   });
 
-  describe('::constructor', () => {
-    it('is a saint', () => {
+  describe('When creating a new EditorRegistry', () => {
+    it('should not throw', () => {
       expect(() => new EditorRegistry()).not.toThrow();
     });
   });
 
-  describe('::activate && ::createFromTextEditor', () => {
-    it('adds current open editors to registry', () => {
+  describe('When activating and creating from a TextEditor', () => {
+    it('should add current open editors to registry', () => {
       expect(editorRegistry.editorTesters.size).toBe(0);
       editorRegistry.activate();
       expect(editorRegistry.editorTesters.size).toBe(1);
     });
 
-    it('adds editors as they are opened', async () => {
+    it('should add editors as they are opened', async () => {
       expect(editorRegistry.editorTesters.size).toBe(0);
       editorRegistry.activate();
       await sleep(0);
@@ -41,7 +41,7 @@ describe('EditorRegistry', () => {
       expect(editorRegistry.editorTesters.size).toBe(2);
     });
 
-    it('removes the editor as it is closed', async () => {
+    it('should remove the editor as it is closed', async () => {
       expect(editorRegistry.editorTesters.size).toBe(0);
       editorRegistry.activate();
       await sleep(0);
@@ -55,7 +55,7 @@ describe('EditorRegistry', () => {
       expect(editorRegistry.editorTesters.size).toBe(0);
     });
 
-    it('does not test instantly if testOnOpen is off', async () => {
+    it('should not test instantly if testOnOpen setting is off', async () => {
       editorRegistry.activate();
       atom.config.set('tester.testOnOpen', false);
       let testCalls = 0;
@@ -68,7 +68,7 @@ describe('EditorRegistry', () => {
       expect(testCalls).toBe(0);
     });
 
-    it('invokes test instantly if testOnOpen is on', async () => {
+    it('should trigger test instantly if testOnOpen is on', async () => {
       editorRegistry.activate();
 
       atom.config.set('tester.testOnOpen', true);
@@ -83,8 +83,8 @@ describe('EditorRegistry', () => {
     });
   });
 
-  describe('::observe', () => {
-    it('calls with current editors and updates as new are opened', async () => {
+  describe('When observe event is called', () => {
+    it('should call with current editors and updates as new are opened', async () => {
       let timesCalled = 0;
       editorRegistry.observe(() => {
         timesCalled += 1;
@@ -99,8 +99,8 @@ describe('EditorRegistry', () => {
     });
   });
 
-  describe('::dispose', () => {
-    it('disposes all the editors on dispose', async () => {
+  describe('When dispose event is called', () => {
+    it('should dispose all the editors on dispose', async () => {
       let timesDisposed = 0;
       editorRegistry.observe((editorTester) => {
         editorTester.onDidDestroy(() => {

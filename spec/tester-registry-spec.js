@@ -18,8 +18,8 @@ describe('TesterRegistry', () => {
     atom.workspace.destroyActivePane();
   });
 
-  describe('::test', () => {
-    it('tests the editor even if its not the active one', async () => {
+  describe('When tesing a TextEditor', () => {
+    it('should test the editor even if its not the active one', async () => {
       try {
         await atom.workspace.open(getFixturesPath('file.txt'));
         const editor = atom.workspace.getActiveTextEditor();
@@ -30,7 +30,7 @@ describe('TesterRegistry', () => {
       }
     });
 
-    it('emits events properly', async () => {
+    it('should emit events properly', async () => {
       let timesBegan = 0;
       let timesUpdated = 0;
       let timesFinished = 0;
@@ -55,7 +55,8 @@ describe('TesterRegistry', () => {
       expect(timesUpdated).toBe(1);
       expect(timesFinished).toBe(1);
     });
-    it('triggers the finish event even when the provider crashes', async () => {
+
+    it('should trigger the finish event even when the provider crashes', async () => {
       let timesBegan = 0;
       let timesUpdated = 0;
       let timesFinished = 0;

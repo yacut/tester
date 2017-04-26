@@ -16,7 +16,7 @@ describe('Tester Commands', () => {
     commands = new Commands();
   });
 
-  it('properly notifies its listeners of command execution', async () => {
+  it('should properly notifies its listeners of command execution', async () => {
     let testCalled = 0;
     let testProjectCalled = 0;
     let toggleOutputCalled = 0;

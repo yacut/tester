@@ -5,7 +5,7 @@ import * as Helpers from '../lib/helpers';
 
 describe('Helpers', () => {
   describe('subscriptiveObserve', () => {
-    it('activates synchronously', () => {
+    it('should activate synchronously', () => {
       let activated = false;
       Helpers.subscriptiveObserve({
         observe(eventName, callback) {
@@ -17,7 +17,7 @@ describe('Helpers', () => {
       expect(activated).toBe(true);
     });
 
-    it('clears last subscription when value changes', () => {
+    it('should clear last subscription when value changes', () => {
       let disposed = 0;
       let activated = false;
       Helpers.subscriptiveObserve({
@@ -37,7 +37,7 @@ describe('Helpers', () => {
       expect(activated).toBe(true);
     });
 
-    it('clears both subscriptions at the end', () => {
+    it('should clear both subscriptions at the end', () => {
       let disposed = 0;
       let observeDisposed = 0;
       let activated = false;
