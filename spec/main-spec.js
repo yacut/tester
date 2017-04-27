@@ -18,7 +18,7 @@ describe('Main', () => {
       expect(tester.markers).toEqual([]);
       expect(tester.runningTestersCount).toBe(0);
       expect(tester.messages).toEqual([]);
-      expect(tester.output).toBe('Nothing new to show');
+      expect(tester.output).toBe('');
 
       expect(tester.createStatusBar).toBeTruthy();
       expect(tester.updateStatusBar).toBeTruthy();
