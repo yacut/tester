@@ -1,3 +1,10 @@
+## 1.0.0
+* add "Run all project tests" feature :tada:
+* add "Results View" :tada:
+* rewrite all view with etch (remove jquery) :racehorse:
+* upgrade dependencies :arrow_up:
+* 
+
 ## 0.4.6
 * add unknown state with inline messages
 
