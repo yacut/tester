@@ -43,9 +43,9 @@ ansi-styles@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-2.2.1.tgz#b432dd3358b634cf75e1e4664368240533c1ddbe"
 
-ansi-to-html@^0.6.0:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/ansi-to-html/-/ansi-to-html-0.6.1.tgz#06c2ad0954c2cdf4aae2dcd638e2e61d11a79d1f"
+ansi-to-html@0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/ansi-to-html/-/ansi-to-html-0.6.0.tgz#719a6b5a9c11178fdb7faead28c604ea90cf8eed"
   dependencies:
     entities "^1.1.1"
 
