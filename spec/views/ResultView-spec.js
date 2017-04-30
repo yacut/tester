@@ -75,7 +75,7 @@ describe('ResultView', () => {
     passedMessage.state = 'passed';
     const skippedMessage = Object.assign({}, messages[0]);
     skippedMessage.state = 'skipped';
-    await view.update({ messages: [passedMessage, skippedMessage] });
+    await view.update({ messages: [skippedMessage, passedMessage] });
     expect(view.refs.failed.textContent).toBe('Failed: 0');
     expect(view.refs.skipped.textContent).toBe('Skipped: 1');
     expect(view.refs.passed.textContent).toBe('Passed: 1');
@@ -83,5 +83,12 @@ describe('ResultView', () => {
     expect(view.refs.testProject.className).not.toContain('tester-wait-button');
     expect(view.refs.emptyContainer.style.display).toBe('none');
     expect(view.refs.messagesContainer.querySelectorAll('.tester-message-row').length).toBe(2);
+    expect(view.refs.messagesContainer.querySelectorAll('.tester-message-row .tester-message-state')[0].textContent).toBe('skipped');
+    expect(view.refs.messagesContainer.querySelectorAll('.tester-message-row .tester-message-state')[1].textContent).toBe('passed');
+
+
+    await view.handleSortByClick('state');
+    expect(view.refs.messagesContainer.querySelectorAll('.tester-message-row .tester-message-state')[0].textContent).toBe('passed');
+    expect(view.refs.messagesContainer.querySelectorAll('.tester-message-row .tester-message-state')[1].textContent).toBe('skipped');
   });
 });
