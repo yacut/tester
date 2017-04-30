@@ -1,16 +1,16 @@
 'use babel';
 
 /* @flow*/
-import StatusBar from '../../lib/views/StatusBar';
+import StatusBarTile from '../../lib/views/StatusBarTile';
 import { messages } from '../common';
 
-describe('StatusBar', () => {
+describe('StatusBarTile', () => {
   it('should not throw new constructor', () => {
-    expect(() => new StatusBar({})).not.toThrow();
+    expect(() => new StatusBarTile({})).not.toThrow();
   });
 
   it('should set counters to zero if no messages', () => {
-    const view = new StatusBar({ messages: [], runningTestersCount: 0 });
+    const view = new StatusBarTile({ messages: [], runningTestersCount: 0 });
     expect(view.element.className).toBe('status-bar-tester inline-block');
     expect(view.refs.failed.textContent).toBe('0');
     expect(view.refs.skipped.textContent).toBe('0');
@@ -19,7 +19,7 @@ describe('StatusBar', () => {
   });
 
   it('should update tiny if test running and counters if some message', async () => {
-    const view = new StatusBar({ messages: [], runningTestersCount: 0 });
+    const view = new StatusBarTile({ messages: [], runningTestersCount: 0 });
     expect(view.element.className).toBe('status-bar-tester inline-block');
     expect(view.refs.failed.textContent).toBe('0');
     expect(view.refs.skipped.textContent).toBe('0');
