@@ -6,7 +6,7 @@
 [![APM Downloads](https://img.shields.io/apm/dm/tester.svg)](https://atom.io/packages/tester)
 [![GitHub stars](https://img.shields.io/github/stars/yacut/tester.svg)](https://github.com/yacut/tester/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/yacut/tester.svg)](https://github.com/yacut/tester/issues)
-[![Dependencies!](https://img.shields.io/david/yacut/Tester.svg)](https://david-dm.org/yacut/tester)
+[![Dependency Status](https://david-dm.org/yacut/tester.svg)](https://david-dm.org/yacut/tester)
 
 Tester is a test runner for the hackable [Atom Editor](http://atom.io). Additionally, you need to install a specific tester provider for your test framework. You will find a full list below in the [Known provider](#known-providers) section.
 
@@ -126,7 +126,7 @@ Stick to imposed code style:
 - [x] add unknown status for test which not ran
 - [x] replace all views with react components (etch)
 - [x] add table view with results similar to nuclide diagnostics
-  - [ ] sort data by column head click
+  - [x] sort data by column head click
   - [x] quick set additional args for test runner
   - [x] merge results from each test runner
   - [ ] re-sizable columns
