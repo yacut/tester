@@ -90,5 +90,16 @@ describe('ResultView', () => {
     await view.handleSortByClick('state');
     expect(view.refs.messagesContainer.querySelectorAll('.tester-message-row .tester-message-state')[0].textContent).toBe('passed');
     expect(view.refs.messagesContainer.querySelectorAll('.tester-message-row .tester-message-state')[1].textContent).toBe('skipped');
+
+    view.goToNextTest();
+    expect(view.currentTest).toEqual(passedMessage);
+    view.goToNextTest();
+    expect(view.currentTest).toEqual(skippedMessage);
+    view.goToNextTest();
+    expect(view.currentTest).toEqual(skippedMessage);
+    view.goToPreviousTest();
+    expect(view.currentTest).toEqual(passedMessage);
+    view.goToPreviousTest();
+    expect(view.currentTest).toEqual(passedMessage);
   });
 });

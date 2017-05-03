@@ -81,7 +81,7 @@ export function provideTester() {
     name: 'tester-name',
     options: {},
     scopes: ['**/test/*.js', '**/*spec.js'],
-    test(textEditor/* or null e.g. to run all tests*/, additionalArgs/*from results views*/) {
+    test(textEditor/* or null to run project tests*/, additionalArgs/* from results views*/) {
       // Note, a Promise may be returned as well!
       return {
         messages: [
@@ -103,7 +103,7 @@ export function provideTester() {
         output: 'tester console output'
       };
     },
-    stop(textEditor) {
+    stop(textEditor/* or null if project tests*/) {
       // stop tester if needed
     }
   };
@@ -131,5 +131,6 @@ Stick to imposed code style:
   - [x] merge results from each test runner
   - [ ] re-sizable columns
   - [ ] side by side diff view for expectations
+  - [x] go to next/previous test commands
 - [x] add run all project tests command
 - [ ] implement [Redux](https://github.com/reactjs/redux) and [redux-observable](https://github.com/redux-observable/redux-observable) for result view
