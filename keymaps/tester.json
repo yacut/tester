@@ -2,5 +2,8 @@
   "atom-workspace": {
     "ctrl-alt-t": "tester:toggle-tester-result",
     "ctrl-alt-shift-p": "tester:test-project"
+  },
+  "atom-pane .tester-view atom-text-editor": {
+    "enter": "tester:test-project"
   }
 }
