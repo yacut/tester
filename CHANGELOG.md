@@ -1,3 +1,6 @@
+## 1.1.0
+:gift: add `test-last` command
+
 ## 1.0.1
 * :bug: fix #10
 
