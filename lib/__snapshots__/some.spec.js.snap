@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`snapshot test 1`] = `
-Object {
-  "a": 1,
-  "b": 2,
-}
-`;
