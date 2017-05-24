@@ -134,4 +134,4 @@ Stick to imposed code style:
   - [x] go to next/previous test commands
 - [x] add run all project tests command
 - [ ] implement [Redux](https://github.com/reactjs/redux) and [redux-observable](https://github.com/redux-observable/redux-observable) for result view
-- [ ] [serialization](http://flight-manual.atom.io/hacking-atom/sections/package-active-editor-info/#serialization) 
+- [x] [serialization](http://flight-manual.atom.io/hacking-atom/sections/package-active-editor-info/#serialization) 
