@@ -10,7 +10,7 @@ describe('Main', () => {
     });
     it('shoud have all properties and methods', () => {
       main.initialize();
-      const tester = main.getInstance();
+      const tester = main.getInstance() || {};
       expect(tester).toBeTruthy();
       expect(tester.commands).toBeTruthy();
       expect(tester.registryEditors).toBeTruthy();

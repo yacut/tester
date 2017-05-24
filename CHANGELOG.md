@@ -1,6 +1,8 @@
+## 1.2.0
+* :gift: add serialization
+
 ## 1.1.1
 * :bug: fix #11
-
 
 ## 1.1.0
 * :gift: add `test-last` command
