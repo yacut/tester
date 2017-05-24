@@ -35,6 +35,10 @@
       }
     }
   },
+  "deserializers": {
+    "tester.ResultView": "deserializeResultView",
+    "tester.ConsoleOutput": "deserializeConsoleOutput"
+  },
   "dependencies": {
     "ansi-to-html": "0.6.2",
     "atom-package-deps": "4.6.0",
