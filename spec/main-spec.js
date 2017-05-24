@@ -1,7 +1,7 @@
 'use babel';
 
 /* @flow*/
-import Tester from '../lib/main';
+import { Tester } from '../lib/main';
 
 describe('Main', () => {
   describe('When creating a new Tester', () => {
