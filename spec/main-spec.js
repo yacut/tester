@@ -1,15 +1,16 @@
 'use babel';
 
 /* @flow*/
-import { Tester } from '../lib/main';
+import main from '../lib/main';
 
 describe('Main', () => {
   describe('When creating a new Tester', () => {
     it('should not throw', () => {
-      expect(() => new Tester()).not.toThrow();
+      expect(() => main.initialize()).not.toThrow();
     });
     it('shoud have all properties and methods', () => {
-      const tester = new Tester();
+      main.initialize();
+      const tester = main.getInstance();
       expect(tester).toBeTruthy();
       expect(tester.commands).toBeTruthy();
       expect(tester.registryEditors).toBeTruthy();
