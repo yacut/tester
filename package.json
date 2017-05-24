@@ -36,8 +36,8 @@
     }
   },
   "deserializers": {
-    "tester.ResultView": "deserializeResultView",
-    "tester.ConsoleOutput": "deserializeConsoleOutput"
+    "tester-result-view": "deserializeResultView",
+    "tester-console-output": "deserializeConsoleOutput"
   },
   "dependencies": {
     "ansi-to-html": "0.6.2",
