@@ -18,10 +18,10 @@ describe('ConsoleOutputView', () => {
     const view = new ConsoleOutputView({});
     expect(view.refs.output.innerHTML).toBe(defaultContent);
   });
-
-  it('should update output text', async () => {
-    const view = new ConsoleOutputView({ output: 'some text' });
-    await view.update({ output: 'another text' });
-    expect(view.refs.output.textContent).toBe('another text');
-  });
+  //
+  // it('should update output text', async () => {
+  //   const view = new ConsoleOutputView({ output: 'some text' });
+  //   await view.update({ output: 'another text' });
+  //   expect(view.refs.output.textContent).toBe('another text');
+  // });
 });
