@@ -1,3 +1,6 @@
+## 1.2.1
+* clear gutter after each test run #17
+
 ## 1.2.0
 * :gift: add serialization
 
