@@ -2,14 +2,15 @@
 
 /* @flow*/
 import { TextBuffer, TextEditor } from 'atom';
-import { messages } from './common';
-import { clearInlineMessages, decorateGutter, setInlineMessages } from '../lib/decorate-manager';
+import { messages, sleep } from './common';
+import { clearInlineMessages, clearDecoratedGutter, decorateGutter, setInlineMessages } from '../lib/decorate-manager';
 
 describe('Decorate Manager', () => {
   let textEditor;
   beforeEach(async () => {
     const buffer = new TextBuffer({ text: 'some text' });
     textEditor = new TextEditor({ buffer, largeFileMode: true });
+    textEditor.addGutter({ name: 'tester' });
   });
 
   describe('setInlineMessages', () => {
@@ -49,12 +50,19 @@ describe('Decorate Manager', () => {
       expect(textEditor.getBuffer().getMarkerCount()).toBe(0);
     });
     it('should not throw if calls with empty gutter', () => {
-      expect(() => decorateGutter(textEditor, textEditor.getGutters()[0], [])).not.toThrow();
+      expect(textEditor.gutterWithName('tester')).toBeTruthy();
+      expect(() => decorateGutter(textEditor, textEditor.gutterWithName('tester'), [])).not.toThrow();
+      expect(textEditor.getBuffer().getMarkerCount()).toBe(0);
+      expect(() => clearDecoratedGutter(textEditor, textEditor.gutterWithName('tester'))).not.toThrow();
       expect(textEditor.getBuffer().getMarkerCount()).toBe(0);
     });
-    it('should clear the inline mesages', () => {
-      decorateGutter(textEditor, textEditor.getGutters()[0], messages);
+    it('should clear the inline mesages', async () => {
+      expect(textEditor.gutterWithName('tester')).toBeTruthy();
+      decorateGutter(textEditor, textEditor.gutterWithName('tester'), messages);
       expect(textEditor.getBuffer().getMarkerCount()).toBe(1);
+      await sleep(1);
+      clearDecoratedGutter(textEditor, textEditor.gutterWithName('tester'));
+      expect(textEditor.getBuffer().getMarkerCount()).toBe(0);
     });
   });
 });
