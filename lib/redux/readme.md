@@ -4,6 +4,17 @@ action -> reducer (change state) -> epic (work with changed state)
 
 ##Use cases for tester
 
+* addTesterAction:
+    -> reducer: add tester to state
+      -> epic:
+          - validate tester props and function
+          - show notification and call removeTesterAction if an error occurred
+
+* removeTesterAction:
+    -> reducer: remove tester from state
+      -> epic:
+          - show notification and call stopTestAction if runningTest
+
 * startTestAction:
     -> reducer: runningTest = true
       -> epic:
