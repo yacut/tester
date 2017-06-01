@@ -15,8 +15,14 @@ action -> reducer (change state) -> epic (work with changed state)
       -> epic:
           - show notification and call stopTestAction if runningTest
 
+* testAction:
+    -> reducer: -
+      -> epic:
+          - check if running
+          - call startTestAction
+
 * startTestAction:
-    -> reducer: runningTest = true
+    -> reducer: running = true
       -> epic:
           - start testers
           - merge currentStateMessages with receivedMessages
@@ -40,7 +46,7 @@ action -> reducer (change state) -> epic (work with changed state)
     -> reducer: editor
       -> epic:
           - call filterMessagesAction (if currentFileOnly filter)
-          - call startTestAction (if runOnOpen setting)
+          - call testAction (if runOnOpen setting)
 
 * finishTestAction:
     -> reducer: runningTest = false
