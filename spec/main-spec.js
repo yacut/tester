@@ -13,8 +13,8 @@ describe('Main', () => {
       const tester = main.getInstance() || {};
       expect(tester).toBeTruthy();
       expect(tester.commands).toBeTruthy();
-      expect(tester.registryEditors).toBeTruthy();
-      expect(tester.registryTesters).toBeTruthy();
+      // expect(tester.registryEditors).toBeTruthy();
+      // expect(tester.registryTesters).toBeTruthy();
       expect(tester.subscriptions).toBeTruthy();
       expect(tester.markers).toEqual([]);
       expect(tester.runningTestersCount).toBe(0);
