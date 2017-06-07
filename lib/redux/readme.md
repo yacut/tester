@@ -26,7 +26,7 @@ action -> reducer (change state) -> epic (work with changed state)
       -> epic:
           - start testers
           - merge currentStateMessages with receivedMessages
-          - call updateMessagesAction
+          - call transformMessagesAction
           - call updateOutputAction
           - call finishTestAction
 
@@ -45,7 +45,7 @@ action -> reducer (change state) -> epic (work with changed state)
 * updateEditorAction:
     -> reducer: editor
       -> epic:
-          - call filterMessagesAction (if currentFileOnly filter)
+          - call transformMessagesAction 
           - call testAction (if runOnOpen setting)
 
 * finishTestAction:
@@ -61,16 +61,21 @@ action -> reducer (change state) -> epic (work with changed state)
           - stop testers
           - call finishTestAction
 
-* sortMessagesAction
+* setSortMessagesAction
     -> reducer: change sort key
       -> epic:
-          - sort currentStateMessages
-          - call updateMessagesAction
+          - call transformMessagesAction
 
-* filterMessagesAction
+* setFilterMessagesAction
     -> reducer: change filter pattern
       -> epic:
-          - filter currentStateMessages
+          - call transformMessagesAction
+
+* transformMessagesAction
+    -> reducer: -
+      -> epic:
+          - filter messages
+          - sort messages
           - call updateMessagesAction
 
 * errorAction
