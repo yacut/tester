@@ -23,7 +23,7 @@ describe('Main', () => {
 
       expect(tester.createStatusBar).toBeTruthy();
       // expect(tester.updateStatusBar).toBeTruthy();
-      expect(tester.togglePanel).toBeTruthy();
+      // expect(tester.togglePanel).toBeTruthy();
       expect(tester.toggleResultView).toBeTruthy();
       expect(tester.dispose).toBeTruthy();
     });
