@@ -1,3 +1,11 @@
+## 1.3.0
+* serialize tester state (panels, results, output)
+* merge test results per file that not remove another file results
+* add 'current file only' filter
+* add 'Clear' button
+* rewrite package with redux and redux-observable to use state
+* improve performance and code quality
+
 ## 1.2.1
 * clear gutter after each test run #17
 
