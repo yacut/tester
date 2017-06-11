@@ -16,10 +16,10 @@ describe('Main', () => {
       // expect(tester.registryEditors).toBeTruthy();
       // expect(tester.registryTesters).toBeTruthy();
       expect(tester.subscriptions).toBeTruthy();
-      expect(tester.markers).toEqual([]);
-      expect(tester.runningTestersCount).toBe(0);
-      expect(tester.messages).toEqual([]);
-      expect(tester.output).toBe('');
+      // expect(tester.markers).toEqual([]);
+      // expect(tester.runningTestersCount).toBe(0);
+      // expect(tester.messages).toEqual([]);
+      // expect(tester.output).toBe('');
 
       expect(tester.createStatusBar).toBeTruthy();
       // expect(tester.updateStatusBar).toBeTruthy();

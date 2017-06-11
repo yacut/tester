@@ -15,13 +15,13 @@ describe('Decorate Manager', () => {
 
   describe('setInlineMessages', () => {
     it('should not throw if calls with empty editor', () => {
-      expect(() => setInlineMessages(null, [], false, '')).not.toThrow();
+      expect(() => setInlineMessages(null, [])).not.toThrow();
     });
     it('should not throw if calls with empty messages', () => {
-      expect(() => setInlineMessages(textEditor, [], false, '')).not.toThrow();
+      expect(() => setInlineMessages(textEditor, [])).not.toThrow();
     });
     it('should add the inline mesage if messages are not empty', () => {
-      setInlineMessages(textEditor, messages, false, '');
+      setInlineMessages(textEditor, messages);
       expect(textEditor.testerMarkers).toBeTruthy();
       expect(textEditor.testerMarkers.length).toBe(1);
     });
@@ -35,7 +35,7 @@ describe('Decorate Manager', () => {
       expect(() => clearInlineMessages(textEditor)).not.toThrow();
     });
     it('should clear the inline mesages', () => {
-      setInlineMessages(textEditor, messages, false, '');
+      setInlineMessages(textEditor, messages);
       clearInlineMessages(textEditor);
       expect(textEditor.testerMarkers.length).toBe(0);
     });
