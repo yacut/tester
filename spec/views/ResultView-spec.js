@@ -4,15 +4,16 @@
 import { TextEditor } from 'atom';
 import ResultView from '../../lib/views/ResultView';
 // import { messages } from '../common';
+import { state } from '../common';
 
 // TODO add spec for 'testProject' button
 describe('ResultView', () => {
   it('should not throw new constructor', () => {
-    expect(() => new ResultView({})).not.toThrow();
+    expect(() => new ResultView({ state })).not.toThrow();
   });
 
   it('should set counters to zero if no messages', () => {
-    const view = new ResultView({ messages: [], runningTestersCount: 0 });
+    const view = new ResultView({ state });
     expect(view.element.className).toBe('tester-view');
     expect(view.refs.failed.textContent).toBe('Failed: 0');
     expect(view.refs.skipped.textContent).toBe('Skipped: 0');
@@ -24,7 +25,7 @@ describe('ResultView', () => {
   });
 
   it('should update elements', async () => {
-    const view = new ResultView({ messages: [], runningTestersCount: 0, softWrap: false });
+    const view = new ResultView({ state });
     expect(view.refs.failed.textContent).toBe('Failed: 0');
     expect(view.refs.skipped.textContent).toBe('Skipped: 0');
     expect(view.refs.passed.textContent).toBe('Passed: 0');

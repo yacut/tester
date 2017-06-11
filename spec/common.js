@@ -21,6 +21,20 @@ export const messages = [
   },
 ];
 
+export const state = {
+  additionalArgs: '',
+  currentFileOnly: false,
+  currentMessage: null,
+  editor: null,
+  isProjectTest: false,
+  messages: [],
+  output: '',
+  rawMessages: [],
+  sorter: { key: '', desc: false },
+  testers: [],
+  testRunning: false,
+};
+
 export function getTester() : Object {
   return {
     name: 'tester-name',

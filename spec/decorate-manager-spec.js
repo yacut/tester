@@ -22,8 +22,8 @@ describe('Decorate Manager', () => {
     });
     it('should add the inline mesage if messages are not empty', () => {
       setInlineMessages(textEditor, messages);
-      expect(textEditor.testerMarkers).toBeTruthy();
-      expect(textEditor.testerMarkers.length).toBe(1);
+      expect(textEditor.getDecorations({ gutterName: 'tester', type: 'gutter' })).toBeTruthy();
+      expect(textEditor.getDecorations({ gutterName: 'tester', type: 'gutter' }).length).toBe(1);
     });
   });
 
@@ -37,7 +37,7 @@ describe('Decorate Manager', () => {
     it('should clear the inline mesages', () => {
       setInlineMessages(textEditor, messages);
       clearInlineMessages(textEditor);
-      expect(textEditor.testerMarkers.length).toBe(0);
+      expect(textEditor.getDecorations({ gutterName: 'tester', type: 'gutter' }).length).toBe(0);
     });
   });
 
