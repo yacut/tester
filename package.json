@@ -65,36 +65,19 @@
       "title": "Test on Open",
       "description": "Should test files on open?",
       "type": "boolean",
-      "default": true,
-      "order": 1
+      "default": true
     },
     "testOnSave": {
       "title": "Test on Save",
       "description": "Should test files on save?",
       "type": "boolean",
-      "default": true,
-      "order": 2
-    },
-    "messageTimeout": {
-      "title": "Output view timeout",
-      "description": "For how many seconds should the output view above the status-bar stay open?",
-      "type": "integer",
-      "default": 5,
-      "order": 3
-    },
-    "showOutputAfterTestRun": {
-      "title": "Show output after test run",
-      "description": "Should show output after test run?",
-      "type": "boolean",
-      "default": false,
-      "order": 4
+      "default": true
     },
     "gutterEnabled": {
       "title": "Gutter Enabled",
       "description": "Should show test results in gutter highlights?",
       "type": "boolean",
-      "default": true,
-      "order": 5
+      "default": true
     },
     "gutterPosition": {
       "title": "Gutter Position",
@@ -104,22 +87,19 @@
         "Right"
       ],
       "type": "string",
-      "default": "Right",
-      "order": 6
+      "default": "Right"
     },
     "ansiToHtml": {
       "title": "Convert ansi console output to html",
       "description": "If console output has ansi colors should it convert to html colors?",
       "type": "boolean",
-      "default": true,
-      "order": 7
+      "default": true
     },
     "showInlineError": {
       "title": "Show errors inline after test run",
       "description": "Should show errors in text editor after test run?",
       "type": "boolean",
-      "default": false,
-      "order": 8
+      "default": false
     },
     "inlineErrorPosition": {
       "title": "Inline error position",
@@ -130,29 +110,25 @@
         "before",
         "tail"
       ],
-      "default": "tail",
-      "order": 9
+      "default": "tail"
     },
     "showNotifications": {
       "title": "Show notifications after test run",
       "description": "Should show notifications after test run if editor not active?",
       "type": "boolean",
-      "default": true,
-      "order": 10
+      "default": true
     },
     "scrollToBottom": {
       "title": "Scroll console output to bottom after test run",
       "description": "Should scroll console output to bottom after test run?",
       "type": "boolean",
-      "default": true,
-      "order": 11
+      "default": true
     },
     "showStatusBar": {
       "title": "Show status bar",
       "description": "Should show status bar?",
       "type": "boolean",
-      "default": true,
-      "order": 12
+      "default": true
     },
     "statusBarOnClick": {
       "title": "Status Bar on click",
@@ -163,15 +139,13 @@
         "results",
         "both"
       ],
-      "default": "both",
-      "order": 13
+      "default": "both"
     },
     "softWrapDefault": {
       "title": "Soft Wrap default",
       "description": "Should wrap the text in results view?",
       "type": "boolean",
-      "default": true,
-      "order": 14
+      "default": true
     }
   }
 }
