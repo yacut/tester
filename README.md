@@ -133,5 +133,5 @@ Stick to imposed code style:
   - [ ] side by side diff view for expectations
   - [x] go to next/previous test commands
 - [x] add run all project tests command
-- [ ] implement [Redux](https://github.com/reactjs/redux) and [redux-observable](https://github.com/redux-observable/redux-observable) for result view
-- [x] [serialization](http://flight-manual.atom.io/hacking-atom/sections/package-active-editor-info/#serialization) 
+- [x] implement [Redux](https://github.com/reactjs/redux) and [redux-observable](https://github.com/redux-observable/redux-observable) for result view
+- [x] [serialization](http://flight-manual.atom.io/hacking-atom/sections/package-active-editor-info/#serialization)
