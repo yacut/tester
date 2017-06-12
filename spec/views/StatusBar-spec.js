@@ -2,7 +2,7 @@
 
 /* @flow*/
 import StatusBarTile from '../../lib/views/StatusBarTile';
-import { state } from '../common';
+import { state, messages } from '../common';
 
 describe('StatusBarTile', () => {
   it('should not throw new constructor', () => {
@@ -19,26 +19,38 @@ describe('StatusBarTile', () => {
   });
 
   it('should update tiny if test running and counters if some message', async () => {
+    let newState;
     const view = new StatusBarTile({ state, onclick: () => {} });
     expect(view.element.className).toBe('status-bar-tester inline-block');
     expect(view.refs.failed.textContent).toBe('0');
     expect(view.refs.skipped.textContent).toBe('0');
     expect(view.refs.passed.textContent).toBe('0');
     expect(view.refs.tiny.className).toContain('idle');
-    // await view.update({ runningTestersCount: 1 });
-    // expect(view.refs.failed.textContent).toBe('0');
-    // expect(view.refs.skipped.textContent).toBe('0');
-    // expect(view.refs.passed.textContent).toBe('0');
-    // expect(view.refs.tiny.className).not.toContain('idle');
-    // await view.update({ messages });
-    // expect(view.refs.failed.textContent).toBe('1');
-    // expect(view.refs.skipped.textContent).toBe('0');
-    // expect(view.refs.passed.textContent).toBe('0');
-    // expect(view.refs.tiny.className).not.toContain('idle');
-    // await view.update({ runningTestersCount: 0 });
-    // expect(view.refs.failed.textContent).toBe('1');
-    // expect(view.refs.skipped.textContent).toBe('0');
-    // expect(view.refs.passed.textContent).toBe('0');
-    // expect(view.refs.tiny.className).toContain('idle');
+
+    newState = Object.assign({}, state);
+    newState.testRunning = true;
+    await view.update(newState);
+    expect(view.refs.failed.textContent).toBe('0');
+    expect(view.refs.skipped.textContent).toBe('0');
+    expect(view.refs.passed.textContent).toBe('0');
+    expect(view.refs.tiny.className).not.toContain('idle');
+
+    newState = Object.assign({}, state);
+    newState.testRunning = true;
+    newState.messages = messages;
+    newState.rawMessages = messages;
+    await view.update(newState);
+    expect(view.refs.failed.textContent).toBe('1');
+    expect(view.refs.skipped.textContent).toBe('0');
+    expect(view.refs.passed.textContent).toBe('0');
+    expect(view.refs.tiny.className).not.toContain('idle');
+
+    newState = Object.assign({}, state);
+    newState.testRunning = false;
+    await view.update(newState);
+    expect(view.refs.failed.textContent).toBe('1');
+    expect(view.refs.skipped.textContent).toBe('0');
+    expect(view.refs.passed.textContent).toBe('0');
+    expect(view.refs.tiny.className).toContain('idle');
   });
 });
