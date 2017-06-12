@@ -11,6 +11,7 @@ describe('Decorate Manager', () => {
     const buffer = new TextBuffer({ text: 'some text' });
     textEditor = new TextEditor({ buffer, largeFileMode: true });
     textEditor.addGutter({ name: 'tester' });
+    delete messages[0].filePath;
   });
 
   describe('setInlineMessages', () => {
@@ -22,9 +23,8 @@ describe('Decorate Manager', () => {
     });
     it('should add the inline mesage if messages are not empty', () => {
       setInlineMessages(textEditor, messages);
-      expect(textEditor.getDecorations({ gutterName: 'tester', type: 'gutter' })).toBeTruthy();
-      // TODO
-      // expect(textEditor.getDecorations({ gutterName: 'tester', type: 'gutter' }).length).toBe(1);
+      expect(textEditor.testerMarkers).toBeTruthy();
+      expect(textEditor.testerMarkers.length).toBe(1);
     });
   });
 
@@ -38,7 +38,7 @@ describe('Decorate Manager', () => {
     it('should clear the inline mesages', () => {
       setInlineMessages(textEditor, messages);
       clearInlineMessages(textEditor);
-      expect(textEditor.getDecorations({ gutterName: 'tester', type: 'gutter' }).length).toBe(0);
+      expect(textEditor.testerMarkers.length).toBe(0);
     });
   });
 
@@ -60,8 +60,7 @@ describe('Decorate Manager', () => {
     it('should clear the inline mesages', async () => {
       expect(textEditor.gutterWithName('tester')).toBeTruthy();
       decorateGutter(textEditor, textEditor.gutterWithName('tester'), messages);
-      // TODO
-      // expect(textEditor.getBuffer().getMarkerCount()).toBe(1);
+      expect(textEditor.getBuffer().getMarkerCount()).toBe(1);
       await sleep(1);
       clearDecoratedGutter(textEditor, textEditor.gutterWithName('tester'));
       expect(textEditor.getBuffer().getMarkerCount()).toBe(0);
