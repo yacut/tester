@@ -1,8 +1,12 @@
 'use babel';
 
-// @flow
+/* @flow*/
 
 import Path from 'path';
+import { Subject } from 'rxjs';
+import { ActionsObservable } from 'redux-observable';
+
+import type { TesterAction, TesterEpic, TesterState } from '../lib/types';
 
 export const messages = [
   {
@@ -60,4 +64,30 @@ export function getEditorTester(textEditor : any) : any {
 
 export function sleep(milliSeconds: number): Promise<void> {
   return new Promise((resolve) => { setTimeout(resolve, milliSeconds); });
+}
+
+// https://jasmine.github.io/1.3/introduction?#section-Asynchronous_Support
+export function asyncTest(run: Function) {
+  return () => {
+    let done = false;
+    waitsFor(() => done);
+    run(() => { done = true; });
+  };
+}
+
+export function getEpicActions(epic: TesterEpic, action: TesterAction, currentState: TesterState = state) {
+  const actions = new Subject();
+  const actions$ = new ActionsObservable(actions);
+  const store = {
+    getState: () => currentState,
+    dispatch: a => ActionsObservable.concat(actions$, a),
+  };
+  const promiseEpic = epic(actions$, store)
+    .toArray()
+    .toPromise();
+
+  actions.next(action);
+  actions.complete();
+
+  return promiseEpic;
 }

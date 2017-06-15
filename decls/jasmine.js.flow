@@ -9,3 +9,4 @@ declare function xdescribe(name: string, callback: Function): ?Promise<void>;
 declare function fdescribe(name: string, callback: Function): ?Promise<void>;
 declare function beforeEach(callback: Function): ?Promise<void>;
 declare function afterEach(callback: Function): ?Promise<void>;
+declare function waitsFor(callback: Function): ?Promise<void>;
