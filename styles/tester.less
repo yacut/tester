@@ -4,23 +4,6 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-.tester-tiny {
-  vertical-align: middle !important;
-  display: inline-block;
-  cursor: wait;
-  margin-left: 3px;
-  margin-right: 3px;
-  background-color: @app-background-color;
-  &.idle {
-    cursor: initial;
-    background: radial-gradient(#64c42d 0.1em, transparent 0.11em);
-  }
-  &.idle::before, &.idle::after {
-    display: none;
-    -webkit-animation: none;
-  }
-}
-
 .gutter[gutter-name=tester] {
     min-width: 0.5em;
 }

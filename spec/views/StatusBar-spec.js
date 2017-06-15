@@ -15,7 +15,7 @@ describe('StatusBarTile', () => {
     expect(view.refs.failed.textContent).toBe('0');
     expect(view.refs.skipped.textContent).toBe('0');
     expect(view.refs.passed.textContent).toBe('0');
-    expect(view.refs.tiny.className).toContain('idle');
+    expect(view.refs.beaker.className).not.toContain('tester-wait-beaker');
   });
 
   it('should update tiny if test running and counters if some message', async () => {
@@ -25,7 +25,7 @@ describe('StatusBarTile', () => {
     expect(view.refs.failed.textContent).toBe('0');
     expect(view.refs.skipped.textContent).toBe('0');
     expect(view.refs.passed.textContent).toBe('0');
-    expect(view.refs.tiny.className).toContain('idle');
+    expect(view.refs.beaker.className).not.toContain('tester-wait-beaker');
 
     newState = Object.assign({}, state);
     newState.testRunning = true;
@@ -33,7 +33,7 @@ describe('StatusBarTile', () => {
     expect(view.refs.failed.textContent).toBe('0');
     expect(view.refs.skipped.textContent).toBe('0');
     expect(view.refs.passed.textContent).toBe('0');
-    expect(view.refs.tiny.className).not.toContain('idle');
+    expect(view.refs.beaker.className).toContain('tester-wait-beaker');
 
     newState = Object.assign({}, state);
     newState.testRunning = true;
@@ -43,7 +43,7 @@ describe('StatusBarTile', () => {
     expect(view.refs.failed.textContent).toBe('1');
     expect(view.refs.skipped.textContent).toBe('0');
     expect(view.refs.passed.textContent).toBe('0');
-    expect(view.refs.tiny.className).not.toContain('idle');
+    expect(view.refs.beaker.className).toContain('tester-wait-beaker');
 
     newState = Object.assign({}, state);
     newState.testRunning = false;
@@ -51,6 +51,6 @@ describe('StatusBarTile', () => {
     expect(view.refs.failed.textContent).toBe('1');
     expect(view.refs.skipped.textContent).toBe('0');
     expect(view.refs.passed.textContent).toBe('0');
-    expect(view.refs.tiny.className).toContain('idle');
+    expect(view.refs.beaker.className).not.toContain('tester-wait-beaker');
   });
 });
