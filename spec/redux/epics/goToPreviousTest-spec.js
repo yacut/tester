@@ -1,25 +1,25 @@
 'use babel';
 
 import { getEpicActions, state, messages } from '../../common';
-import goToNextTestEpic from '../../../lib/redux/epics/goToNextTest';
+import goToPreviousTestEpic from '../../../lib/redux/epics/goToPreviousTest';
 import * as actions from '../../../lib/redux/actions';
 
-describe('goToNextTestEpic', () => {
+describe('goToPreviousTestEpic', () => {
   it('dispatches nothing when no messages', async () => {
     const expectedOutputActions = [];
-    const actualOutputActions = await getEpicActions(goToNextTestEpic, actions.goToNextTestAction());
+    const actualOutputActions = await getEpicActions(goToPreviousTestEpic, actions.goToPreviousTestAction());
     expect(actualOutputActions).toEqual(expectedOutputActions);
   });
 
-  it('dispatches the correct actions with first message when the current message not set', async () => {
+  it('dispatches the correct actions with last message when the current message not set', async () => {
     const currentState = Object.assign({}, state);
     currentState.messages = messages;
     const expectedOutputActions = [actions.setCurrentMessageAction(messages[0])];
-    const actualOutputActions = await getEpicActions(goToNextTestEpic, actions.goToNextTestAction(), currentState);
+    const actualOutputActions = await getEpicActions(goToPreviousTestEpic, actions.goToPreviousTestAction(), currentState);
     expect(actualOutputActions).toEqual(expectedOutputActions);
   });
 
-  it('dispatches the correct actions with second message when the current message is first', async () => {
+  it('dispatches the correct actions with fist message when the current message is second', async () => {
     const currentState = Object.assign({}, state);
     const firstMessage = Object.assign({}, messages[0]);
     firstMessage.lineNumber = '1';
@@ -27,10 +27,10 @@ describe('goToNextTestEpic', () => {
     secondMessage.lineNumber = '2';
 
     currentState.messages = [firstMessage, secondMessage];
-    currentState.currentMessage = firstMessage;
+    currentState.currentMessage = secondMessage;
 
-    const expectedOutputActions = [actions.setCurrentMessageAction(secondMessage)];
-    const actualOutputActions = await getEpicActions(goToNextTestEpic, actions.goToNextTestAction(), currentState);
+    const expectedOutputActions = [actions.setCurrentMessageAction(firstMessage)];
+    const actualOutputActions = await getEpicActions(goToPreviousTestEpic, actions.goToPreviousTestAction(), currentState);
     expect(actualOutputActions).toEqual(expectedOutputActions);
   });
 
@@ -40,7 +40,7 @@ describe('goToNextTestEpic', () => {
     const errorMessage = 'some error';
     spyOn(actions, 'setCurrentMessageAction').andCallFake(() => { throw errorMessage; });
     const expectedOutputActions = [actions.errorAction(errorMessage)];
-    const actualOutputActions = await getEpicActions(goToNextTestEpic, actions.goToNextTestAction(), currentState);
+    const actualOutputActions = await getEpicActions(goToPreviousTestEpic, actions.goToPreviousTestAction(), currentState);
     expect(actualOutputActions).toEqual(expectedOutputActions);
   });
 });
