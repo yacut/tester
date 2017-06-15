@@ -4,7 +4,7 @@ import { getEpicActions } from '../../common';
 import clearEpic from '../../../lib/redux/epics/clear';
 import * as actions from '../../../lib/redux/actions';
 
-describe('clear Epic', () => {
+describe('clearEpic', () => {
   it('dispatches the correct actions when it is successful', async () => {
     const expectedOutputActions = [actions.updateMessagesAction([], []), actions.updateOutputAction('')];
     const actualOutputActions = await getEpicActions(clearEpic, actions.clearAction());
