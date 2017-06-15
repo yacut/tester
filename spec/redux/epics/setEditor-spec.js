@@ -9,16 +9,17 @@ describe('setEditorEpic', () => {
   let textEditor;
   beforeEach(async () => {
     const buffer = new TextBuffer({ text: 'some text' });
+    buffer.setPath(messages[0].filePath);
     textEditor = new TextEditor({ buffer, largeFileMode: true });
-    textEditor.setPath(messages[0].filePath);
   });
 
-  xit('dispatches the correct actions when it is successful', async () => {
+  it('dispatches the correct actions when it is successful', async () => {
     const currentState = Object.assign({}, state);
     currentState.messages = messages;
-    currentState.testers = [{ scopes: [textEditor.getPath()] }];
+    currentState.testers = [{ scopes: [messages[0].filePath] }];
     const expectedOutputActions = [actions.updateEditorAction(textEditor)];
     const actualOutputActions = await getEpicActions(setEditorEpic, actions.setEditorAction(textEditor), currentState);
+    await sleep(1);
     expect(actualOutputActions).toEqual(expectedOutputActions);
   });
 
