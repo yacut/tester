@@ -3,7 +3,7 @@
 /* @flow*/
 
 import Path from 'path';
-import { Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
 import { ActionsObservable } from 'redux-observable';
 
 import type { TesterAction, TesterEpic, TesterState } from '../lib/types';
@@ -71,7 +71,7 @@ export function getEpicActions(epic: TesterEpic, action: TesterAction, currentSt
   const actions$ = new ActionsObservable(actions);
   const store = {
     getState: () => currentState,
-    dispatch: a => ActionsObservable.concat(actions$, a),
+    dispatch: a => ActionsObservable.concat(actions$, Observable.of(a)),
   };
   const promiseEpic = epic(actions$, store)
     .toArray()
