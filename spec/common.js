@@ -66,15 +66,6 @@ export function sleep(milliSeconds: number): Promise<void> {
   return new Promise((resolve) => { setTimeout(resolve, milliSeconds); });
 }
 
-// https://jasmine.github.io/1.3/introduction?#section-Asynchronous_Support
-export function asyncTest(run: Function) {
-  return () => {
-    let done = false;
-    waitsFor(() => done);
-    run(() => { done = true; });
-  };
-}
-
 export function getEpicActions(epic: TesterEpic, action: TesterAction, currentState: TesterState = state) {
   const actions = new Subject();
   const actions$ = new ActionsObservable(actions);
