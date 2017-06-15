@@ -138,7 +138,7 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
   opacity: 1;
   background-image: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.15) 50%) !important;
   background-size: 10px 100%;
-  -webkit-animation: available-package-is-installing 0.5s linear infinite;
+  -webkit-animation: tester-waiting-animation 0.5s linear infinite;
 }
 
 .tester-messages {
@@ -289,4 +289,8 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
   height: 4px;
   cursor: row-resize;
   z-index: 3;
+}
+
+@-webkit-keyframes tester-waiting-animation {
+  100% { background-position: -10px 0px; }
 }
