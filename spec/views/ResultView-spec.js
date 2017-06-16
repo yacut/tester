@@ -3,7 +3,7 @@
 /* @flow*/
 import { TextEditor } from 'atom';
 import ResultView from '../../lib/views/ResultView';
-import { state, failedTest, passedTest, skippedTest } from '../common';
+import { asyncTest, state, failedTest, passedTest, skippedTest } from '../common';
 
 // TODO add spec for 'testProject' button
 describe('ResultView', () => {
@@ -24,7 +24,7 @@ describe('ResultView', () => {
     expect(view.refs.messagesContainer.querySelectorAll('.tester-message-row').length).toBe(0);
   });
 
-  it('should update elements', async () => {
+  it('should update elements', asyncTest(async (done) => {
     let newState;
     const view = new ResultView({ state });
     expect(view.refs.failed.textContent).toBe('Failed: 0');
@@ -102,5 +102,6 @@ describe('ResultView', () => {
     expect(view.refs.skipped.textContent).toBe('Skipped: 1');
     expect(view.refs.passed.textContent).toBe('Passed: 1');
     expect(view.refs.messagesContainer.querySelectorAll('.tester-message-row').length).toBe(3);
-  });
+    done();
+  }));
 });
