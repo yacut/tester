@@ -146,6 +146,12 @@
       "description": "Should wrap the text in results view?",
       "type": "boolean",
       "default": true
+    },
+    "removeCurrentFileFilterIfProjectTest": {
+      "title": "Remove current file only filter if project test run",
+      "description": "Should remove current file filter if project test run?",
+      "type": "boolean",
+      "default": true
     }
   }
 }
