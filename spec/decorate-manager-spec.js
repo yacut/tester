@@ -2,12 +2,14 @@
 
 /* @flow*/
 import { TextBuffer, TextEditor } from 'atom';
-import { messages, sleep } from './common';
+import { failedTest, sleep } from './common';
 import { clearInlineMessages, clearDecoratedGutter, decorateGutter, setInlineMessages } from '../lib/decorate-manager';
 
 describe('Decorate Manager', () => {
   let textEditor;
+  let messages;
   beforeEach(async () => {
+    messages = [Object.assign(failedTest)];
     const buffer = new TextBuffer({ text: 'some text' });
     textEditor = new TextEditor({ buffer, largeFileMode: true });
     textEditor.addGutter({ name: 'tester' });

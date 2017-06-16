@@ -8,22 +8,40 @@ import { ActionsObservable } from 'redux-observable';
 
 import type { TesterAction, TesterEpic, TesterState } from '../lib/types';
 
-export const messages = [
-  {
-    duration: 1, // duration in ms
-    error: {
-      name: 'optional error object',
-      message: 'something went wrong',
-      actual: 'optional actual result', // can be an object
-      expected: 'optional expected result', // can be an object
-      operator: 'optional operator',
-    },
-    filePath: 'file path to highlight',
-    lineNumber: 1, // line number to highlight
-    state: 'failed', // 'passed' | 'failed' | 'skipped',
-    title: 'some test title',
+export const passedTest = {
+  duration: 1,
+  error: null,
+  filePath: '/path/to/spec.js',
+  lineNumber: 1,
+  state: 'passed',
+  title: 'passed test',
+};
+
+export const skippedTest = {
+  duration: 0,
+  error: null,
+  filePath: '/path/to/some-spec.js',
+  lineNumber: 2,
+  state: 'skipped',
+  title: 'skipped test',
+};
+
+export const failedTest = {
+  duration: 1,
+  error: {
+    name: 'optional error object',
+    message: 'something went wrong',
+    actual: 'optional actual result',
+    expected: 'optional expected result',
+    operator: 'optional operator',
   },
-];
+  filePath: 'file path to highlight',
+  lineNumber: 1,
+  state: 'failed',
+  title: 'some test title',
+};
+
+export const messages = [passedTest, failedTest];
 
 export const state = {
   additionalArgs: '',

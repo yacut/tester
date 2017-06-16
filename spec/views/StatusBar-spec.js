@@ -2,9 +2,9 @@
 
 /* @flow*/
 import StatusBarTile from '../../lib/views/StatusBarTile';
-import { state, messages } from '../common';
+import { state, failedTest } from '../common';
 
-describe('StatusBarTile', () => {
+describe('StatusBar', () => {
   it('should not throw new constructor', () => {
     expect(() => new StatusBarTile({ state, onclick: () => {} })).not.toThrow();
   });
@@ -37,8 +37,8 @@ describe('StatusBarTile', () => {
 
     newState = Object.assign({}, state);
     newState.testRunning = true;
-    newState.messages = messages;
-    newState.rawMessages = messages;
+    newState.messages = [failedTest];
+    newState.rawMessages = [failedTest];
     await view.update(newState);
     expect(view.refs.failed.textContent).toBe('1');
     expect(view.refs.skipped.textContent).toBe('0');
