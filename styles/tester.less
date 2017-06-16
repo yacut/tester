@@ -285,3 +285,12 @@ atom-text-editor.editor .tester-highlight, .tester-highlight{
     50% { color: @text-color-error; }
     100% { color: @text-color-success; }
 }
+
+.tester-wait-bottom-status {
+  -webkit-animation: tester-opacity-changing-animation 1s infinite;
+}
+@-webkit-keyframes tester-opacity-changing-animation {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
