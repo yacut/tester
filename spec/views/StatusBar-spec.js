@@ -25,7 +25,7 @@ describe('StatusBarTile', () => {
     expect(view.refs.failed.textContent).toBe('0');
     expect(view.refs.skipped.textContent).toBe('0');
     expect(view.refs.passed.textContent).toBe('0');
-    expect(view.refs.beaker.className).not.toContain('tester-wait-beaker');
+    expect(view.refs.beaker.className).not.toContain('tester-wait-bottom-status');
 
     newState = Object.assign({}, state);
     newState.testRunning = true;
@@ -33,7 +33,7 @@ describe('StatusBarTile', () => {
     expect(view.refs.failed.textContent).toBe('0');
     expect(view.refs.skipped.textContent).toBe('0');
     expect(view.refs.passed.textContent).toBe('0');
-    expect(view.refs.beaker.className).toContain('tester-wait-beaker');
+    expect(view.refs.beaker.className).toContain('tester-wait-bottom-status');
 
     newState = Object.assign({}, state);
     newState.testRunning = true;
@@ -43,7 +43,7 @@ describe('StatusBarTile', () => {
     expect(view.refs.failed.textContent).toBe('1');
     expect(view.refs.skipped.textContent).toBe('0');
     expect(view.refs.passed.textContent).toBe('0');
-    expect(view.refs.beaker.className).toContain('tester-wait-beaker');
+    expect(view.refs.beaker.className).toContain('tester-wait-bottom-status');
 
     newState = Object.assign({}, state);
     newState.testRunning = false;
@@ -51,6 +51,6 @@ describe('StatusBarTile', () => {
     expect(view.refs.failed.textContent).toBe('1');
     expect(view.refs.skipped.textContent).toBe('0');
     expect(view.refs.passed.textContent).toBe('0');
-    expect(view.refs.beaker.className).not.toContain('tester-wait-beaker');
+    expect(view.refs.beaker.className).not.toContain('tester-wait-bottom-status');
   });
 });
