@@ -2,7 +2,7 @@
 
 /* @flow*/
 import { TextBuffer, TextEditor } from 'atom';
-import { failedTest, sleep } from './common';
+import { asyncTest, failedTest } from './common';
 import { clearInlineMessages, clearDecoratedGutter, decorateGutter, setInlineMessages } from '../lib/decorate-manager';
 
 describe('Decorate Manager', () => {
@@ -11,9 +11,9 @@ describe('Decorate Manager', () => {
   beforeEach(async () => {
     messages = [Object.assign(failedTest)];
     const buffer = new TextBuffer({ text: 'some text' });
+    buffer.setPath(messages[0].filePath);
     textEditor = new TextEditor({ buffer, largeFileMode: true });
     textEditor.addGutter({ name: 'tester' });
-    delete messages[0].filePath;
   });
 
   describe('setInlineMessages', () => {
@@ -23,49 +23,59 @@ describe('Decorate Manager', () => {
     it('should not throw if calls with empty messages', () => {
       expect(() => setInlineMessages(textEditor, [])).not.toThrow();
     });
-    it('should add the inline mesage if messages are not empty', () => {
+    it('should add the inline message if messages are not empty', () => {
+      atom.config.set('tester.showInlineError', true);
       setInlineMessages(textEditor, messages);
       expect(textEditor.testerMarkers).toBeTruthy();
       expect(textEditor.testerMarkers.length).toBe(1);
+    });
+    it('should not set a inline message if setting is disabled', () => {
+      atom.config.set('tester.showInlineError', false);
+      setInlineMessages(textEditor, messages);
+      expect(textEditor.testerMarkers).not.toBeTruthy();
     });
   });
 
   describe('clearInlineMessages', () => {
     it('should not throw if calls with empty editor', () => {
-      expect(() => clearInlineMessages(null)).not.toThrow();
+      expect(async () => { await clearInlineMessages(null); }).not.toThrow();
     });
     it('should not throw if calls with empty messages', () => {
-      expect(() => clearInlineMessages(textEditor)).not.toThrow();
+      expect(async () => { await clearInlineMessages(textEditor); }).not.toThrow();
     });
-    it('should clear the inline mesages', () => {
-      setInlineMessages(textEditor, messages);
-      clearInlineMessages(textEditor);
+    it('should clear the inline mesages', asyncTest(async (done) => {
+      atom.config.set('tester.showInlineError', true);
+      await setInlineMessages(textEditor, messages);
+      await clearInlineMessages(textEditor);
       expect(textEditor.testerMarkers.length).toBe(0);
-    });
+      done();
+    }));
   });
 
   describe('decorateGutter', () => {
     it('should not throw if calls with empty editor', () => {
-      expect(() => decorateGutter(null, null, [])).not.toThrow();
+      expect(() => decorateGutter(null, [])).not.toThrow();
     });
     it('should not throw if calls with empty gutter', () => {
-      expect(() => decorateGutter(textEditor, null, [])).not.toThrow();
+      expect(() => decorateGutter(textEditor, [])).not.toThrow();
       expect(textEditor.getBuffer().getMarkerCount()).toBe(0);
     });
     it('should not throw if calls with empty gutter', () => {
       expect(textEditor.gutterWithName('tester')).toBeTruthy();
-      expect(() => decorateGutter(textEditor, textEditor.gutterWithName('tester'), [])).not.toThrow();
+      expect(() => decorateGutter(textEditor, [])).not.toThrow();
       expect(textEditor.getBuffer().getMarkerCount()).toBe(0);
-      expect(() => clearDecoratedGutter(textEditor, textEditor.gutterWithName('tester'))).not.toThrow();
+      expect(() => clearDecoratedGutter(textEditor)).not.toThrow();
       expect(textEditor.getBuffer().getMarkerCount()).toBe(0);
     });
-    it('should clear the inline mesages', async () => {
+    it('should clear the inline mesages', asyncTest(async (done) => {
+      atom.config.set('tester.gutterEnabled', true);
       expect(textEditor.gutterWithName('tester')).toBeTruthy();
-      decorateGutter(textEditor, textEditor.gutterWithName('tester'), messages);
+      await decorateGutter(textEditor, messages);
       expect(textEditor.getBuffer().getMarkerCount()).toBe(1);
-      await sleep(1);
-      clearDecoratedGutter(textEditor, textEditor.gutterWithName('tester'));
+
+      await clearDecoratedGutter(textEditor);
       expect(textEditor.getBuffer().getMarkerCount()).toBe(0);
-    });
+      done();
+    }));
   });
 });
