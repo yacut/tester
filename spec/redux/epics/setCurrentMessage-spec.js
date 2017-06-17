@@ -6,7 +6,7 @@ import * as actions from '../../../lib/redux/actions';
 
 describe('setCurrentMessageEpic', () => {
   it('dispatches the correct actions when it is successful', asyncTest(async (done) => {
-    spyOn(atom.workspace, 'open').andCallFake(() => new Promise((resolve) => { resolve(); }));
+    spyOn(atom.workspace, 'open').andCallFake(() => Promise.resolve());
     const expectedOutputActions = [];
     const actualOutputActions = await getEpicActions(setCurrentMessageEpic, actions.setCurrentMessageAction(passedTest));
     expect(actualOutputActions).toEqual(expectedOutputActions);
@@ -15,7 +15,7 @@ describe('setCurrentMessageEpic', () => {
   }));
 
   it('dispatches nothing when no current message', asyncTest(async (done) => {
-    spyOn(atom.workspace, 'open');
+    spyOn(atom.workspace, 'open').andCallFake(() => Promise.resolve());
     const expectedOutputActions = [];
     const actualOutputActions = await getEpicActions(setCurrentMessageEpic, actions.setCurrentMessageAction());
     expect(actualOutputActions).toEqual(expectedOutputActions);
