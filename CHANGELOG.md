@@ -1,8 +1,12 @@
 ## 1.3.0
-* serialize tester state (panels, results, output)
+* save tester state for each project even after restart (serialize panels, results, output etc.)
 * merge test results per file that not remove another file results
 * add 'current file only' filter
 * add 'Clear' button
+* add settings for status bat position and priority
+* add total tests and total time indicators to results view
+* improve soft wrap for errors in results view
+* additional args are also used for file test now
 * rewrite package with redux and redux-observable to use state
 * improve performance and code quality
 
