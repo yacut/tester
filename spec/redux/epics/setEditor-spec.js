@@ -26,14 +26,14 @@ describe('setEditorEpic', () => {
 
   it('dispatches nothing when not in scope', asyncTest(async (done) => {
     currentState.testers = [{ scopes: [] }];
-    const expectedOutputActions = [];
+    const expectedOutputActions = [actions.updateEditorAction(null)];
     const actualOutputActions = await getEpicActions(setEditorEpic, actions.setEditorAction(textEditor), currentState);
     expect(actualOutputActions).toEqual(expectedOutputActions);
     done();
   }));
 
   it('dispatches nothing when no editor in action', asyncTest(async (done) => {
-    const expectedOutputActions = [];
+    const expectedOutputActions = [actions.updateEditorAction(null)];
     const actualOutputActions = await getEpicActions(setEditorEpic, actions.setEditorAction(null), currentState);
     expect(actualOutputActions).toEqual(expectedOutputActions);
     done();
