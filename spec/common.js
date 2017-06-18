@@ -57,20 +57,19 @@ export const state = {
   testRunning: false,
 };
 
-export function getTester() : Object {
-  return {
-    name: 'tester-name',
-    options: {},
-    scopes: ['*test.js', '**spec.js'],
-    test() {
+export const sampleTester = {
+  name: 'tester-name',
+  options: {},
+  scopes: ['*test.js', '**spec.js'],
+  test() {
       // Note, a Promise may be returned as well!
-      return {
-        messages,
-        output: 'tester console output',
-      };
-    },
-  };
-}
+    return {
+      messages,
+      output: 'tester console output',
+    };
+  },
+  stop() {},
+};
 
 export function getFixturesPath() : string {
   return Path.join(__dirname, 'fixtures/test.txt');
