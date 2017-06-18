@@ -72,8 +72,8 @@ export function getTester() : Object {
   };
 }
 
-export function getFixturesPath(path : string) : string {
-  return Path.join(__dirname, 'fixtures', path);
+export function getFixturesPath() : string {
+  return Path.join(__dirname, 'fixtures/test.txt');
 }
 
 export function getEditorTester(textEditor : any) : any {
