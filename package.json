@@ -141,6 +141,24 @@
       ],
       "default": "both"
     },
+    "statusBarPosition": {
+      "title": "Status bar position",
+      "description": "Which position should be status bar: left or right?",
+      "type": "string",
+      "enum": [
+        "Left",
+        "Right"
+      ],
+      "default": "Left"
+    },
+    "statusBarPriority": {
+      "title": "Status bar priority",
+      "description": "Lower priority tiles are placed further to the position side.",
+      "type": "integer",
+      "default": 0,
+      "minimum": -1000,
+      "maximum": 1000
+    },
     "softWrapDefault": {
       "title": "Soft Wrap default",
       "description": "Should wrap the text in results view?",
