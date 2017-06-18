@@ -39,6 +39,20 @@ describe('updateEditorEpic', () => {
     expect(await decorateManager.handleGutter).toHaveBeenCalled();
     done();
   }));
+  it('dispatches the correct actions when testOnOpen enabled  and testOnSave disabled', asyncTest(async (done) => {
+    atom.config.set('tester.testOnOpen', true);
+    atom.config.set('tester.testOnSave', false);
+    spyOn(decorateManager, 'handleGutter').andCallFake(() => Promise.resolve());
+    const expectedOutputActions = [actions.testAction()];
+    const action$ = new ActionsObservable(Observable.of(actions.updateEditorAction(textEditor)));
+    const actualOutputActions = [];
+    updateEditorEpic(action$).subscribe(action => actualOutputActions.push(action));
+    textEditor.saveAs(getFixturesPath());
+
+    expect(actualOutputActions).toEqual(expectedOutputActions);
+    expect(await decorateManager.handleGutter).toHaveBeenCalled();
+    done();
+  }));
   it('dispatches the correct actions when testOnOpen and testOnSave enabled', asyncTest(async (done) => {
     atom.config.set('tester.testOnOpen', true);
     atom.config.set('tester.testOnSave', true);
