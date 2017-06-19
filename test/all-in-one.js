@@ -30,7 +30,7 @@ describe('Some mocha tests', () => {
   describe('Some second level describe', () => {
     it('should delay test and pass', (done) => {
       assert.ok(true, true);
-      setTimeout(done, 3000);
+      setTimeout(done, 300);
     });
   });
 });
