@@ -100,6 +100,51 @@ describe('startTestEpic', () => {
     done();
   }));
 
+  it('dispatches the correct actions when project test, state messages and tester messages', asyncTest(async (done) => {
+    const stateMessages = [Object.assign({}, passedTest)];
+    const testerMessages = [Object.assign({}, failedTest)];
+    currentState.rawMessages = stateMessages;
+    spyOn(sampleTester, 'test').andCallFake(() => Promise.resolve({ messages: testerMessages, output }));
+    const expectedOutputActions = [
+      actions.transformMessagesAction([passedTest, failedTest]),
+      actions.updateOutputAction(output),
+      actions.finishTestAction(),
+    ];
+    const actualOutputActions = await getEpicActions(startTestEpic, actions.startTestAction(true), currentState);
+    expect(actualOutputActions).toEqual(expectedOutputActions);
+    expect(sampleTester.test).toHaveBeenCalledWith(null, currentState.additionalArgs);
+    done();
+  }));
+
+  it('dispatches the correct actions when file test and in scope', asyncTest(async (done) => {
+    currentState.editor = getTextEditor(null, passedTest.filePath);
+    const messages = [Object.assign({}, passedTest)];
+    spyOn(sampleTester, 'test').andCallFake(() => Promise.resolve({ messages, output }));
+    sampleTester.scopes = ['**'];
+    const expectedOutputActions = [
+      actions.transformMessagesAction(messages),
+      actions.updateOutputAction(output),
+      actions.finishTestAction(),
+    ];
+    const actualOutputActions = await getEpicActions(startTestEpic, actions.startTestAction(false), currentState);
+    expect(actualOutputActions).toEqual(expectedOutputActions);
+    expect(sampleTester.test).toHaveBeenCalledWith(currentState.editor, currentState.additionalArgs);
+    done();
+  }));
+
+  it('dispatches the correct actions when file test and not in scope', asyncTest(async (done) => {
+    currentState.editor = getTextEditor(null, passedTest.filePath);
+    spyOn(sampleTester, 'test');
+    sampleTester.scopes = ['some non scope regex'];
+    const expectedOutputActions = [
+      actions.finishTestAction(),
+    ];
+    const actualOutputActions = await getEpicActions(startTestEpic, actions.startTestAction(false), currentState);
+    expect(actualOutputActions).toEqual(expectedOutputActions);
+    expect(sampleTester.test).not.toHaveBeenCalled();
+    done();
+  }));
+
   it('dispatches the correct actions when project test and two testers', asyncTest(async (done) => {
     const firstTester = Object.assign({}, sampleTester);
     const secondTester = Object.assign({}, sampleTester);
