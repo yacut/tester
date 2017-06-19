@@ -3,6 +3,7 @@
 /* @flow*/
 
 import Path from 'path';
+import { TextBuffer, TextEditor } from 'atom';
 import { Subject, Observable } from 'rxjs';
 import { ActionsObservable } from 'redux-observable';
 
@@ -75,8 +76,12 @@ export function getFixturesPath() : string {
   return Path.join(__dirname, 'fixtures/test.txt');
 }
 
-export function getEditorTester(textEditor : any) : any {
-  return { editor: textEditor };
+export function getTextEditor(text: ?string, path: ?string) : TextEditor {
+  const buffer = new TextBuffer({ text: text || 'some text' });
+  buffer.setPath(path);
+  const textEditor = new TextEditor({ buffer, largeFileMode: true });
+
+  return textEditor;
 }
 
 export function sleep(milliSeconds: number): Promise<void> {
