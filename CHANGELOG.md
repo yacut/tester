@@ -6,6 +6,7 @@
 * add settings for status bat position and priority
 * add total tests and total time indicators to results view
 * improve soft wrap for errors in results view
+* add copy context menu to console output view
 * additional args are also used for file test now
 * rewrite package with redux and redux-observable to use state
 * improve performance and code quality
