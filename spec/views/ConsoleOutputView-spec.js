@@ -13,7 +13,7 @@ describe('ConsoleOutputView', () => {
     const initState = Object.assign({}, state);
     initState.output = 'some text';
     const view = new ConsoleOutputView({ state: initState });
-    expect(view.element.className).toBe('tester-view');
+    expect(view.element.className).toBe('tester-view native-key-bindings');
     expect(view.refs.output.textContent).toBe('some text');
   });
 
