@@ -27,14 +27,12 @@
         ]
       }
     ],
-    "context-menu": {
-      ".tester-view": [
-        {
-          "label": "Copy",
-          "command": "core:copy"
-        }
-      ]
-    }
+    ".tester-view .output": [
+      {
+        "label": "Copy",
+        "command": "core:copy"
+      }
+    ]
   },
   "menu": [
     {
