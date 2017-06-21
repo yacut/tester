@@ -1,6 +1,5 @@
 'use babel';
 
-import { tmpdir } from 'os';
 import { TextBuffer, TextEditor } from 'atom';
 import { asyncTest, getEpicActions, state, passedTest, failedTest, getTextEditor } from '../../common';
 import transformMessagesEpic from '../../../lib/redux/epics/transformMessages';
