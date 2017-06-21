@@ -1,18 +1,24 @@
+## 1.3.1
+* :bug: fix error format if message is empty (mocha >3.4)
+* :bug: fix test with windows path
+* :bug: fix padding for console view
+
 ## 1.3.0
-* save tester state for each project even after restart (serialize panels, results, output etc.)
-* merge test results per file that not remove another file results
-* add 'current file only' filter
-* add 'Clear' button
-* add settings for status bat position and priority
-* add total tests and total time indicators to results view
-* improve soft wrap for errors in results view
-* add copy context menu to console output view
-* additional args are also used for file test now
-* rewrite package with redux and redux-observable to use state
-* improve performance and code quality
+* :gift: save tester state for each project even after restart (serialize panels, results, output etc.)
+* :gift: merge test results per file that not remove another file results
+* :gift: add 'current file only' filter
+* :gift: add 'Clear' button
+* :gift: add settings for status bat position and priority
+* :gift: add total tests and total time indicators to results view
+* :gift: improve soft wrap for errors in results view
+* :gift: add copy context menu to console output view
+* :gift: additional args are also used for file test now
+* :art: rewrite package with redux and redux-observable to use state
+* :racehorse: improve performance and code quality
+* :arrow_up: upgrade dependencies
 
 ## 1.2.1
-* clear gutter after each test run #17
+* :bug: clear gutter after each test run #17
 
 ## 1.2.0
 * :gift: add serialization

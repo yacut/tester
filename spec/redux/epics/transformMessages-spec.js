@@ -1,5 +1,6 @@
 'use babel';
 
+import { tmpdir } from 'os';
 import { TextBuffer, TextEditor } from 'atom';
 import { asyncTest, getEpicActions, state, passedTest, failedTest } from '../../common';
 import transformMessagesEpic from '../../../lib/redux/epics/transformMessages';
@@ -71,14 +72,15 @@ describe('transformMessagesEpic', () => {
 
   it('dispatches the correct actions when no messages in state and currentFileOnly filter', asyncTest(async (done) => {
     const buffer = new TextBuffer({ text: 'some text' });
-    buffer.setPath(passedTest.filePath);
+    const filePath = `${tmpdir()}tester.txt`;
+    buffer.setPath(filePath);
     currentState.editor = new TextEditor({ buffer, largeFileMode: true });
     currentState.rawMessages = [];
     currentState.sorter.key = '';
     currentState.currentFileOnly = true;
 
-    const newMessages = [Object.assign({}, passedTest), Object.assign({}, failedTest)];
-    const expectedOutputActions = [actions.updateMessagesAction([Object.assign({}, passedTest)], newMessages)];
+    const newMessages = [Object.assign({}, passedTest, { filePath }), Object.assign({}, failedTest)];
+    const expectedOutputActions = [actions.updateMessagesAction([Object.assign({}, passedTest, { filePath })], newMessages)];
     const actualOutputActions = await getEpicActions(transformMessagesEpic, actions.transformMessagesAction(newMessages), currentState);
     expect(actualOutputActions).toEqual(expectedOutputActions);
     done();
