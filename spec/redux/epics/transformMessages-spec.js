@@ -2,7 +2,7 @@
 
 import { tmpdir } from 'os';
 import { TextBuffer, TextEditor } from 'atom';
-import { asyncTest, getEpicActions, state, passedTest, failedTest } from '../../common';
+import { asyncTest, getEpicActions, state, passedTest, failedTest, getTextEditor } from '../../common';
 import transformMessagesEpic from '../../../lib/redux/epics/transformMessages';
 import * as actions from '../../../lib/redux/actions';
 
@@ -71,10 +71,8 @@ describe('transformMessagesEpic', () => {
   }));
 
   it('dispatches the correct actions when no messages in state and currentFileOnly filter', asyncTest(async (done) => {
-    const buffer = new TextBuffer({ text: 'some text' });
-    const filePath = `${tmpdir()}tester.txt`;
-    buffer.setPath(filePath);
-    currentState.editor = new TextEditor({ buffer, largeFileMode: true });
+    currentState.editor = getTextEditor('some text', 'tester.txt');
+    const filePath = currentState.editor.getPath();
     currentState.rawMessages = [];
     currentState.sorter.key = '';
     currentState.currentFileOnly = true;

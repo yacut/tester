@@ -34,7 +34,7 @@ describe('startTestEpic', () => {
   }));
 
   it('dispatches the correct actions when not project test and file set but modified', asyncTest(async (done) => {
-    currentState.editor = getTextEditor(null, passedTest.filePath);
+    currentState.editor = getTextEditor(null, 'tester.txt');
     spyOn(sampleTester, 'test');
     spyOn(currentState.editor, 'isModified').andCallFake(() => true);
     const expectedOutputActions = [actions.finishTestAction()];
@@ -117,8 +117,9 @@ describe('startTestEpic', () => {
   }));
 
   it('dispatches the correct actions when file test and in scope', asyncTest(async (done) => {
-    currentState.editor = getTextEditor(null, passedTest.filePath);
-    const messages = [Object.assign({}, passedTest)];
+    currentState.editor = getTextEditor(null, 'tester.txt');
+    const filePath = currentState.editor.getPath();
+    const messages = [Object.assign({}, passedTest, { filePath })];
     spyOn(sampleTester, 'test').andCallFake(() => Promise.resolve({ messages, output }));
     sampleTester.scopes = ['**'];
     const expectedOutputActions = [
@@ -133,7 +134,7 @@ describe('startTestEpic', () => {
   }));
 
   it('dispatches the correct actions when file test and not in scope', asyncTest(async (done) => {
-    currentState.editor = getTextEditor(null, passedTest.filePath);
+    currentState.editor = getTextEditor(null, 'tester.txt');
     spyOn(sampleTester, 'test');
     sampleTester.scopes = ['some non scope regex'];
     const expectedOutputActions = [
