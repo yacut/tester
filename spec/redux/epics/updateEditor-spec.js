@@ -20,8 +20,7 @@ describe('updateEditorEpic', () => {
     atom.config.set('tester.testOnOpen', false);
     atom.config.set('tester.testOnSave', false);
     spyOn(decorateManager, 'handleGutter').andCallFake(() => Promise.resolve());
-    // FIXME undefined
-    const expectedOutputActions = [undefined];
+    const expectedOutputActions = [];
     const actualOutputActions = await getEpicActions(updateEditorEpic, actions.updateEditorAction(textEditor), currentState);
 
     expect(actualOutputActions).toEqual(expectedOutputActions);
@@ -32,7 +31,7 @@ describe('updateEditorEpic', () => {
     atom.config.set('tester.testOnOpen', true);
     atom.config.set('tester.testOnSave', false);
     spyOn(decorateManager, 'handleGutter').andCallFake(() => Promise.resolve());
-    const expectedOutputActions = [actions.testAction(), undefined];
+    const expectedOutputActions = [actions.testAction()];
     const actualOutputActions = await getEpicActions(updateEditorEpic, actions.updateEditorAction(textEditor), currentState);
 
     expect(actualOutputActions).toEqual(expectedOutputActions);

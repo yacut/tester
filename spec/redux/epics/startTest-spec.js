@@ -170,12 +170,12 @@ describe('startTestEpic', () => {
   it('dispatches the correct actions when there is an error', asyncTest(async (done) => {
     const errorMessage = 'some error';
     currentState.editor = getTextEditor();
-    spyOn(currentState.editor, 'getPath').andCallFake(() => { throw errorMessage; });
-    spyOn(sampleTester, 'test');
+    spyOn(currentState.editor, 'getPath').andCallFake(() => '');
+    spyOn(sampleTester, 'test').andCallFake(() => { throw errorMessage; });
     const expectedOutputActions = [actions.errorAction(errorMessage), actions.stopTestAction()];
-    const actualOutputActions = await getEpicActions(startTestEpic, actions.startTestAction(), currentState);
+    const actualOutputActions = await getEpicActions(startTestEpic, actions.startTestAction(true), currentState);
     expect(actualOutputActions).toEqual(expectedOutputActions);
-    expect(sampleTester.test).not.toHaveBeenCalled();
+    expect(sampleTester.test).toHaveBeenCalled();
     done();
   }));
 });

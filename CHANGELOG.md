@@ -1,3 +1,7 @@
+## 1.3.2
+* :bug: fix #16
+* :bug: fix update editor epic
+
 ## 1.3.1
 * :bug: fix error format if message is empty (mocha >3.4)
 * :bug: fix test with windows path
