@@ -103,7 +103,7 @@ export function provideTester() {
         output: 'tester console output'
       };
     },
-    stop(textEditor/* or null if project tests*/) {
+    stop() {
       // stop tester if needed
     }
   };

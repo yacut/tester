@@ -10,6 +10,8 @@
     "testing",
     "interactive",
     "mocha",
+    "jest",
+    "phpunit",
     "wallaby.js"
   ],
   "repository": "https://github.com/yacut/tester",
