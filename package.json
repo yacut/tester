@@ -172,6 +172,16 @@
       "description": "Should remove current file filter if project test run?",
       "type": "boolean",
       "default": true
+    },
+    "testStateStyle": {
+      "title": "Test state style",
+      "description": "Show results state as text or icon?",
+      "type": "string",
+      "enum": [
+        "Text",
+        "Icon"
+      ],
+      "default": "Text"
     }
   }
 }
