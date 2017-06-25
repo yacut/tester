@@ -129,7 +129,7 @@ Stick to imposed code style:
   - [x] sort data by column head click
   - [x] quick set additional args for test runner
   - [x] merge results from each test runner
-  - [ ] re-sizable columns
+  - [x] re-sizable columns
   - [ ] side by side diff view for expectations
   - [x] go to next/previous test commands
 - [x] add run all project tests command
