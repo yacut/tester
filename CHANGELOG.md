@@ -1,3 +1,9 @@
+## 1.4.0
+* :gift: add setting for state column style (text or icon) #21
+* :gift: re-sizable columns in results view
+* :gift: serialize columns width
+* :bug: fix sort if wrong message format
+
 ## 1.3.2
 * :bug: fix #16
 * :bug: fix update editor epic
