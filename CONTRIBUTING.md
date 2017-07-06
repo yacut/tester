@@ -22,7 +22,7 @@ If you would like to contribute enhancements or fixes, please do the following:
 * Reference issues and pull requests liberally
 * When only changing documentation, include `[ci skip]` in the commit description
 * Consider starting the commit message with an applicable emoji:
-    * :gift: when adding a new feature
+    * :gift: `:gift:` when adding a new feature
     * :art: `:art:` when improving the format/structure of the code
     * :racehorse: `:racehorse:` when improving performance
     * :non-potable_water: `:non-potable_water:` when plugging memory leaks
