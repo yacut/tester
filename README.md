@@ -1,5 +1,8 @@
 # Tester
 
+[![Donate Bitcoin](https://img.shields.io/badge/donate-$10-orange.svg)](
+https://blockchain.info/payment_request?address=1Ndg2GN1r4UfyqBtAUgLmVVjv8a9xYokU5&message=I+like+your+GitHub+Project!&amount_local=10&currency=USD&nosavecurrency=true
+)
 [![Build Status](https://travis-ci.org/yacut/tester.svg)](https://travis-ci.org/yacut/tester)
 [![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/yacut/tester?svg=true)](https://ci.appveyor.com/api/projects/status/github/yacut/tester)
 [![APM Version](https://img.shields.io/apm/v/tester.svg)](https://atom.io/packages/tester)
